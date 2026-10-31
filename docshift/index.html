@@ -67,7 +67,7 @@
   <li>your settings (theme, language, scan and compression defaults, and similar);</li>
   <li>backup settings, if you use backup (see below).</li>
 </ul>
-<p>You can delete single documents, empty the Trash, or use Settings &gt; Delete all data to remove what DocShift has stored: your documents, page images, signatures, signing certificates and their key, and your settings. Uninstalling the app also removes its data from your phone.</p>
+<p>You can delete single documents, empty the Trash, or use Settings &gt; Delete all data to remove everything DocShift has stored: your documents, page images, signatures, unfinished PDF edit drafts, signing certificates and their key, and your settings. Uninstalling the app also removes its data from your phone.</p>
 
 <h2>Backup to a folder you choose</h2>
 <p>DocShift can save a ZIP backup of your documents, or an automatic backup, to a folder you pick with Android's system file picker. That folder can be on your phone or in a cloud app such as Google Drive, OneDrive or Dropbox.</p>
@@ -95,12 +95,11 @@
   <li><strong>Fingerprint and biometrics (USE_BIOMETRIC, USE_FINGERPRINT).</strong> Lets you confirm a signature with your fingerprint or face.</li>
   <li><strong>On-device AI service (AICore).</strong> The permission for the Android AICore service lets DocShift use the on-device model for summaries. It is declared by the ML Kit summarization library.</li>
   <li><strong>Background work (WorkManager).</strong> WAKE_LOCK, RECEIVE_BOOT_COMPLETED and FOREGROUND_SERVICE let the scheduled backup and Trash clean-up run in the background.</li>
-  <li><strong>Notifications.</strong> DocShift declares the Android notification permission, but this version does not show any notifications.</li>
   <li><strong>Storage (Android 9 and older only).</strong> Saving exported page images to your gallery. On Android 10 and newer, DocShift needs no storage permission.</li>
 </ul>
 
 <h2>Data deletion</h2>
-<p>You can delete documents at any time in the app. Documents in the Trash are removed automatically after 30 days. Settings &gt; Delete all data removes what DocShift has stored in the app, as described above. Unfinished PDF edits are kept as drafts until the edit is saved, and uninstalling the app removes them. The developer holds no copy of your data, so there is nothing to request from us.</p>
+<p>You can delete documents at any time in the app. Documents in the Trash are removed automatically after 30 days. Settings &gt; Delete all data removes everything DocShift has stored in the app, including unfinished PDF edit drafts, as described above. Uninstalling the app also removes them. The developer holds no copy of your data, so there is nothing to request from us.</p>
 
 <h2>Children</h2>
 <p>DocShift is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
