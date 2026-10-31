@@ -13,34 +13,61 @@
 </head>
 <body>
 <h1>DocShift Privacy Policy</h1>
-<p class="meta">App: DocShift (com.coderhub.docshift) · Developer: CoderHub26 · Effective: 23 October 2026</p>
+<p class="meta">App: DocShift (com.coderhub.docshift) · Developer: CoderHub26 · Effective: 31 October 2026</p>
 
 <h2>Summary</h2>
-<p>DocShift is a document scanner and PDF tool. It works on your device: your scans, PDFs and photos stay in the app's private storage on your phone. The developer does not run any server for DocShift, does not receive your documents, and does not sell or share your data. DocShift has no accounts, no ads, no in-app purchases and no analytics SDK of its own.</p>
+<p>DocShift is a document scanner, PDF tool and passport and ID photo maker. It works on your device: your scans, PDFs, photos and signatures stay in the app's private storage on your phone. The developer does not run any server for DocShift, does not receive your documents, and does not sell or share your data. The only network requests DocShift makes itself are the optional signature revocation checks described below, which send certificate identifiers and never document content. DocShift has no accounts, no ads, no in-app purchases and no analytics SDK of its own.</p>
 
 <h2>Camera and photos</h2>
 <ul>
-  <li><strong>Camera.</strong> DocShift asks for the camera permission only to take pictures of documents. Pictures are processed on your device.</li>
+  <li><strong>Camera.</strong> DocShift asks for the camera permission to take pictures of documents and to take passport and ID photos. Pictures are processed on your device.</li>
   <li><strong>Photos and files.</strong> When you import a photo or a PDF, Android's system file picker gives DocShift access only to the file you choose. DocShift does not scan your whole gallery or storage.</li>
 </ul>
 
 <h2>Document scanning and text recognition (Google ML Kit)</h2>
-<p>DocShift uses Google ML Kit for two features:</p>
+<p>DocShift uses Google ML Kit for these features:</p>
 <ul>
   <li><strong>Document scanner.</strong> Edge detection, crop and filters come from Google's ML Kit Document Scanner, which runs inside Google Play services on your phone.</li>
-  <li><strong>Text recognition (OCR).</strong> Copying text from scans uses an on-device text recognition model bundled with the app.</li>
+  <li><strong>Text recognition (OCR).</strong> Copying text from scans, including text in a selected area of a page, uses an on-device text recognition model bundled with the app.</li>
 </ul>
 <p>Images are processed on your device. They are not sent to the developer or to Google by DocShift for these features. ML Kit may send limited diagnostic and usage information to Google, such as device information, app information and performance metrics, under <a href="https://developers.google.com/ml-kit/terms">Google's ML Kit terms</a>. This is handled by Google under its own privacy policy, not by the developer.</p>
+
+<h2>Passport and ID photos</h2>
+<p>The passport and ID photo maker uses two Google ML Kit features: face detection, to check the face against the photo rules, and subject segmentation, to separate the person from the background. Both run inside Google Play services on your phone, and Play services downloads their models. Photos are processed on your device and are not sent to the developer, and DocShift does not send them to Google. The same ML Kit terms as above apply to the limited diagnostic information that ML Kit may send. You save or share the finished photo yourself, to a place you choose.</p>
+
+<h2>Summaries on your phone (Gemini Nano)</h2>
+<p>On phones that support it, DocShift can write a short summary of a document with Gemini Nano, through ML Kit GenAI Summarization and Android AICore. The summary is made on your device, and the document text is not sent to the developer. The model is downloaded through Android AICore only after you tap Download in the summary sheet. On phones that do not support it, the summary option is not shown.</p>
+
+<h2>Digital signatures</h2>
+<ul>
+  <li><strong>Signature images.</strong> A drawn signature is stored as an image in the app's private storage. Signature images are included in DocShift backups.</li>
+  <li><strong>Signing certificates.</strong> You can import a certificate file (.pfx or .p12), or create a self-signed certificate with a name, email address and organisation that you enter. The certificate file and its password are encrypted with AES-256-GCM, using a key kept in the Android Keystore that cannot be exported. Certificate details, such as the name, issuer, serial number, validity dates and fingerprint, are kept in the app's database. Signing certificates are not included in DocShift backups or in Android's cloud backup.</li>
+  <li><strong>Trusted certificates.</strong> You can add certificate files to DocShift's own trusted list. They are kept in the app's database.</li>
+  <li><strong>Confirming a signature.</strong> Before each signature, DocShift asks you to confirm with your fingerprint, face or screen lock. Signing is not possible on a phone without a screen lock or a strong biometric.</li>
+  <li><strong>Exports.</strong> If you export a certificate (as a .cer public certificate or a .pfx copy), the file goes to the place you choose.</li>
+</ul>
+
+<h2>Signature checks and revocation</h2>
+<p>When you check a signature, DocShift can check whether the signer's certificate has been revoked. The option <em>Check revocation online</em> is on by default. You can turn it off on the Verify signatures screen.</p>
+<p>When it is on, DocShift contacts the servers of the certificate authority named in the certificate:</p>
+<ul>
+  <li><strong>OCSP.</strong> A request that carries the certificate's identifiers (its serial number and hashes of its issuer's name and key), and a random number used to match the answer.</li>
+  <li><strong>CRL.</strong> A download of the authority's revocation list from the address in the certificate.</li>
+  <li><strong>Missing certificates.</strong> If a certificate needed to build the signer's chain is missing from the file, DocShift downloads it from the address in the certificate.</li>
+</ul>
+<p>These requests never include the content of your document. As with any internet request, the authority's server sees your IP address, and the authority's own privacy policy applies to what it records. When the option is off, DocShift makes no network requests for signature checks, and the result says that revocation was not checked.</p>
 
 <h2>Information stored on your device</h2>
 <p>DocShift keeps these in the app's private storage on your device:</p>
 <ul>
-  <li>your scans, page images, PDFs, signatures and exported files;</li>
+  <li>your scans, page images, PDFs, drawn signatures and exported files;</li>
   <li>your folders, document names, search and sort choices, and the Trash (deleted documents are kept there for 30 days, then removed automatically);</li>
+  <li>unfinished PDF edits, kept as drafts until the edit is saved;</li>
+  <li>signing certificates and trusted certificates, as described above;</li>
   <li>your settings (theme, language, scan and compression defaults, and similar);</li>
   <li>backup settings, if you use backup (see below).</li>
 </ul>
-<p>You can delete single documents, empty the Trash, or use Settings &gt; Delete all data to remove everything DocShift has stored. Uninstalling the app also removes its data from your phone.</p>
+<p>You can delete single documents, empty the Trash, or use Settings &gt; Delete all data to remove what DocShift has stored: your documents, page images, signatures, signing certificates and their key, and your settings. Uninstalling the app also removes its data from your phone.</p>
 
 <h2>Backup to a folder you choose</h2>
 <p>DocShift can save a ZIP backup of your documents, or an automatic backup, to a folder you pick with Android's system file picker. That folder can be on your phone or in a cloud app such as Google Drive, OneDrive or Dropbox.</p>
@@ -48,26 +75,32 @@
   <li>DocShift writes the backup file to the folder you chose. The cloud app you picked (if any) does the upload, under its own terms. DocShift never receives your cloud account details or passwords.</li>
   <li>You can protect a backup with a password. The backup is then encrypted with AES-256 on your phone before it is written.</li>
   <li>Your backup password never leaves your phone. If you turn on automatic backups with a password, DocShift stores the password encrypted with a key kept in the Android Keystore, so the scheduled backup can run.</li>
+  <li>Signing certificates are not part of the backup. Signature images are.</li>
   <li>DocShift does not turn on Android's own cloud backup for your scans. Scans are excluded from Android cloud backup and device transfer.</li>
 </ul>
 
 <h2>Information that leaves your device</h2>
 <ul>
   <li><strong>Only what you choose to share or back up.</strong> When you share a PDF, image or text, DocShift hands the file to the app you pick. When you save a backup, it goes to the folder you pick. What happens next is up to that app or service.</li>
+  <li><strong>Signature checks.</strong> The certificate requests described above, when the option is on.</li>
   <li><strong>Feedback email.</strong> The Send feedback option opens your own email app with the support address filled in. The message is written by you and sent by you. It may include the app version, your Android version and your device model, shown in the draft so you can see them before you send. Nothing is sent unless you send the email.</li>
+  <li><strong>Google Play.</strong> The Rate option in About opens the DocShift page in the Play Store, or on the web if no store app is installed.</li>
 </ul>
-<p>DocShift does not send your documents, scans or usage data to the developer.</p>
+<p>DocShift does not send your documents, scans, signatures or usage data to the developer.</p>
 
 <h2>Permissions</h2>
 <ul>
-  <li>Camera: taking pictures of documents.</li>
-  <li>Notifications: declared by Android's WorkManager library, which runs the scheduled backup and Trash clean-up in the background. DocShift does not send you notifications of its own.</li>
-  <li>Storage (Android 9 and older only): saving exported page images to your gallery. On Android 10 and newer, DocShift needs no storage permission.</li>
-  <li>Internet and network state: the Google ML Kit libraries declare these permissions in their own code. DocShift itself does not make network requests for your documents.</li>
+  <li><strong>Camera.</strong> Taking pictures of documents and passport and ID photos.</li>
+  <li><strong>Internet and network state.</strong> Used only for the signature revocation checks above, which you can turn off. Google's ML Kit libraries also declare internet and network-state access in their own code, as described in the ML Kit section.</li>
+  <li><strong>Fingerprint and biometrics (USE_BIOMETRIC, USE_FINGERPRINT).</strong> Lets you confirm a signature with your fingerprint or face.</li>
+  <li><strong>On-device AI service (AICore).</strong> The permission for the Android AICore service lets DocShift use the on-device model for summaries. It is declared by the ML Kit summarization library.</li>
+  <li><strong>Background work (WorkManager).</strong> WAKE_LOCK, RECEIVE_BOOT_COMPLETED and FOREGROUND_SERVICE let the scheduled backup and Trash clean-up run in the background.</li>
+  <li><strong>Notifications.</strong> DocShift declares the Android notification permission, but this version does not show any notifications.</li>
+  <li><strong>Storage (Android 9 and older only).</strong> Saving exported page images to your gallery. On Android 10 and newer, DocShift needs no storage permission.</li>
 </ul>
 
 <h2>Data deletion</h2>
-<p>You can delete documents at any time in the app. Documents in the Trash are removed automatically after 30 days. Settings &gt; Delete all data removes everything DocShift has stored on your phone. The developer holds no copy of your data, so there is nothing to request from us.</p>
+<p>You can delete documents at any time in the app. Documents in the Trash are removed automatically after 30 days. Settings &gt; Delete all data removes what DocShift has stored in the app, as described above. Unfinished PDF edits are kept as drafts until the edit is saved, and uninstalling the app removes them. The developer holds no copy of your data, so there is nothing to request from us.</p>
 
 <h2>Children</h2>
 <p>DocShift is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>

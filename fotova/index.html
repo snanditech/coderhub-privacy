@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fotova Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>Fotova Privacy Policy</h1>
+<p class="meta">App: Fotova (com.coderhub.fotova) · Developer: CoderHub26 · Effective: 31 October 2026</p>
+
+<h2>Summary</h2>
+<p>Fotova makes passport, visa and ID photos on your phone. It works on your device: your photos stay in the app's private storage on your phone. The developer does not run any server for Fotova and does not receive your photos. Fotova has no accounts, no ads, no in-app purchases and no analytics SDK of its own.</p>
+
+<h2>Camera and photos</h2>
+<ul>
+  <li><strong>Camera.</strong> Fotova asks for the camera permission only when you choose to take a photo. The camera runs inside the app. The photo is processed on your device, and the temporary file is deleted once Fotova has read it.</li>
+  <li><strong>Photos from your gallery.</strong> When you choose to import a photo, Android's system photo picker gives Fotova access only to the photo you pick.</li>
+</ul>
+
+<h2>Face detection and subject segmentation (Google ML Kit)</h2>
+<p>Fotova uses two Google ML Kit features to make passport and visa photos:</p>
+<ul>
+  <li><strong>Face detection</strong>, to find the face and check its position against the photo rules.</li>
+  <li><strong>Subject segmentation</strong>, to separate the person from the background.</li>
+</ul>
+<p>Both features run inside Google Play services on your phone. Fotova asks Play services to download the models when the app is installed. Photos are processed on your device. Fotova does not send them to the developer, and Fotova does not send them to Google for these features. ML Kit may send limited diagnostic and usage information to Google, such as device information, app information and performance metrics, under <a href="https://developers.google.com/ml-kit/terms">Google's ML Kit terms</a>. Google handles that information under its own privacy policy, not the developer.</p>
+
+<h2>Information stored on your device</h2>
+<p>Fotova keeps these in the app's private storage on your device:</p>
+<ul>
+  <li>every print sheet (PDF) and digital photo you save, share or print, which is copied into "My photos", together with a small preview image and a list of your saved photos;</li>
+  <li>the details of each saved photo, such as its kind, passport or visa type, country and date;</li>
+  <li>your settings: the export size you last picked for each kind of output, the scan-quality default, your theme and your language;</li>
+  <li>your backup settings, if you use backup (see below).</li>
+</ul>
+<p>Temporary working files, such as the camera capture and the sheet or photo being prepared before you save, share or print it, are kept in the app's cache. Fotova deletes or replaces them as it works. Android may also clear the cache.</p>
+
+<h2>Backup and restore to a folder you choose</h2>
+<p>Fotova can save a backup of your photos and export settings to a folder you pick with Android's system folder picker. That folder can be on your phone or in a cloud app such as Google Drive, OneDrive or Dropbox.</p>
+<ul>
+  <li><strong>What is in a backup.</strong> Every saved photo with its details, and Fotova's export settings. Your theme, your language and your backup settings are not included. Thumbnails are made again when you restore.</li>
+  <li><strong>Where it goes.</strong> Fotova writes the backup file to the folder you chose. If that folder is in a cloud app, the cloud app uploads it under its own terms. Fotova never receives your cloud account details or passwords.</li>
+  <li><strong>Automatic backup (optional, off by default).</strong> When it is on, Fotova writes a backup once a day, and shortly after you save a new photo. It is set to Wi-Fi only by default. Fotova keeps one previous copy of the backup in the same folder.</li>
+  <li><strong>Password (optional).</strong> You can protect a backup with a password. The backup is then encrypted with AES-256 on your phone before it is written. An encrypted backup uses the .dsbackup file extension. Your password is never kept in plain form. If you turn on encrypted automatic backups, Fotova stores the password encrypted with a key kept in the Android Keystore, so that scheduled backups can run. A lost password cannot be recovered.</li>
+  <li><strong>Restore.</strong> Restoring adds the photos that are not already on your phone and skips the rest.</li>
+  <li><strong>Android's own backup.</strong> Fotova turns off Android's automatic cloud backup and device-to-device transfer for its data. Your photos are not copied to Google's automatic backup.</li>
+</ul>
+
+<h2>Information that leaves your device</h2>
+<ul>
+  <li><strong>Only what you choose to share, save, print or back up.</strong> When you share a photo, Fotova hands a copy of the file to the app you pick, with temporary read access only. When you save a photo, it goes to the place you pick. When you print, the sheet goes to the print service and printer you select. When you back up, the file goes to the folder you pick. What happens next is up to that app, service or printer.</li>
+</ul>
+<p>Fotova does not send your photos, usage data or personal information to the developer.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Camera.</strong> Taking a passport or visa photo inside the app.</li>
+  <li><strong>Internet and network state.</strong> Fotova's own code makes no network requests. A transport component in the Google ML Kit libraries declares internet and network-state access in its own code. WorkManager, the library that runs scheduled backups, also declares network-state access so that the Wi-Fi-only setting can be applied. The only network use by Fotova's own code is opening the privacy policy in your browser when you tap Privacy policy in Settings.</li>
+  <li><strong>Background work (WorkManager).</strong> These permissions let scheduled backups run: WAKE_LOCK keeps the phone awake while a backup runs, RECEIVE_BOOT_COMPLETED lets scheduled backups be set up again after a restart, and FOREGROUND_SERVICE is declared for WorkManager's background service.</li>
+</ul>
+<p>Fotova does not ask for storage, location, contacts, microphone or notification permission.</p>
+
+<h2>Data deletion</h2>
+<ul>
+  <li><strong>Delete a photo.</strong> In "My photos", tap Delete on a photo. Fotova removes the photo, its preview and its entry from the phone. Copies you saved or shared elsewhere, and copies in a backup folder, are not changed.</li>
+  <li><strong>Backup files.</strong> Delete backup files in the folder you chose, or in the cloud app that holds them.</li>
+  <li><strong>Uninstall.</strong> Uninstalling Fotova removes its data from your phone.</li>
+</ul>
+<p>The developer holds no copy of your photos, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>Fotova is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Not affiliated with any government</h2>
+<p>Fotova is not affiliated with any government or official body. Passport and visa photo rules can change. Check the latest requirements from the office that receives your photo before you submit it.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>
