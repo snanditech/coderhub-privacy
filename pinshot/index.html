@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PinShot Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>PinShot Privacy Policy</h1>
+<p class="meta">App: PinShot – GPS Map Camera (com.coderhub.pinshot) · Developer: CoderHub26 · Effective: 5 November 2026</p>
+
+<h2>Summary</h2>
+<p>PinShot is a camera that stamps photos and videos with the place and time they were taken: a map, the address, coordinates, the date and a note. Your photos and videos are saved on your phone, in your gallery. The developer does not run any server for PinShot, does not receive your photos, videos or location, and does not sell or share your data. PinShot has no accounts, no ads, no in-app purchases and no analytics SDK.</p>
+
+<h2>Location</h2>
+<ul>
+  <li><strong>When it is used.</strong> PinShot asks for the location permission (precise and approximate) to put the place on your photos and videos. Location is used only while the camera screen is open. PinShot never uses location in the background.</li>
+  <li><strong>Geotags in your files.</strong> Every photo and video PinShot saves contains its location: coordinates, altitude, compass direction and the address are written into the file (EXIF data for photos, location metadata for videos), and the coordinates are added to Android's media library. Anyone you send the original file to can read this information. This is the purpose of the app.</li>
+  <li><strong>Manual location.</strong> You can set a location yourself instead of GPS. It is stored in the app's settings on your phone.</li>
+  <li><strong>Mock locations.</strong> PinShot checks whether a location comes from a mock location app and does not stamp such locations as GPS.</li>
+</ul>
+
+<h2>Map, address and weather (network requests)</h2>
+<p>To show the map, the address and, if you turn it on, the weather, PinShot sends the coordinates of the place to these services:</p>
+<ul>
+  <li><strong>Google Maps.</strong> The map on the stamp and on the manual location screen is drawn with the Google Maps SDK for Android, which loads map images for the place from Google.</li>
+  <li><strong>Google address lookup.</strong> The address comes from Android's Geocoder, which is provided by Google Play services and looks up the coordinates (or the place you search for on the manual location screen) with Google.</li>
+  <li><strong>Open-Meteo (weather, off by default).</strong> If you turn on the weather line in the stamp settings, PinShot sends the coordinates to <a href="https://open-meteo.com/">Open-Meteo</a> to get the current temperature and conditions.</li>
+</ul>
+<p>Only the coordinates (or the place name you search for) are sent, never your photos or videos. These services see your IP address, as with any internet request, and handle the requests under their own privacy policies: <a href="https://policies.google.com/privacy">Google</a> and <a href="https://open-meteo.com/en/terms">Open-Meteo</a>. <strong>Offline mode</strong> in Settings stops all of these requests; stamps then show coordinates and time only.</p>
+
+<h2>Camera and microphone</h2>
+<ul>
+  <li><strong>Camera.</strong> Used to take photos and record videos. The stamp is drawn on your phone.</li>
+  <li><strong>Microphone.</strong> Asked for only the first time you record a video with sound. Sound is recorded into the video file on your phone. You can turn sound off in Settings &gt; Video.</li>
+  <li><strong>Gallery photos.</strong> When you stamp a photo from your gallery, Android's photo picker gives PinShot access only to the photo you choose.</li>
+</ul>
+
+<h2>Information stored on your device</h2>
+<ul>
+  <li>Stamped photos are saved to your gallery (Pictures/PinShot by default) and videos to Movies/PinShot. Unstamped originals are kept in the app's private storage if "Keep originals" is on.</li>
+  <li>An index of your PinShot photos (time, coordinates, accuracy, address, note and stamp style) is kept in the app's private database for the gallery, search and reports.</li>
+  <li>Your settings, stamp templates, logo and manual location are kept in the app's private storage.</li>
+  <li>Map images are cached in the app's cache to avoid downloading them again.</li>
+</ul>
+
+<h2>Sharing and reports</h2>
+<p>When you share a photo, PinShot hands it (as a JPEG or a PDF, in the size you choose) to the app you pick, with a short text containing the address, the coordinates, a Google Maps link and the time. Reports (PDF, CSV, GPX, KML) are created on your phone and go wherever you choose to save or share them. What happens next is up to that app or service.</p>
+
+<h2>Backup to a folder you choose</h2>
+<p>PinShot can save a backup of your stamped photos, settings and logo to a folder you pick with Android's system file picker, once or automatically. That folder can be on your phone or in a cloud app such as Google Drive, OneDrive or Dropbox.</p>
+<ul>
+  <li>PinShot writes the backup file to the folder you chose. The cloud app you picked (if any) does the upload, under its own terms. PinShot never receives your cloud account details.</li>
+  <li>You can protect a backup with a password. It is then encrypted with AES-256 on your phone before it is written. If automatic backup uses a password, the password is stored encrypted with a key kept in the Android Keystore.</li>
+  <li>Android's own cloud backup is turned off for PinShot.</li>
+</ul>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Camera.</strong> Photos and videos.</li>
+  <li><strong>Location (precise and approximate).</strong> The place on the stamp and in the file, while the camera is open.</li>
+  <li><strong>Microphone.</strong> Sound in videos, only if you record with sound.</li>
+  <li><strong>Internet and network state.</strong> Map, address and optional weather lookups described above.</li>
+  <li><strong>Background work (WorkManager).</strong> Lets the scheduled backup run when you turn it on.</li>
+</ul>
+
+<h2>Data deletion</h2>
+<p>Settings &gt; Delete all app data removes the photo index, the app cache and the private originals. Photos and videos already saved to your gallery are yours and stay there; delete them in your gallery app. Uninstalling the app also removes its private data. The developer holds no copy of your data, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>PinShot is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>
