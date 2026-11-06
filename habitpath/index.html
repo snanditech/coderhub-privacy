@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HabitPath Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>HabitPath Privacy Policy</h1>
+<p class="meta">App: HabitPath: Habit Tracker (com.coderhub.habitpath) · Developer: CoderHub26 · Effective: 6 November 2026</p>
+
+<h2>Summary</h2>
+<p>HabitPath is a habit and routine tracker. Your habits, check-ins, skipped days, pauses, milestones and settings are stored on your phone, in the app's private storage. The developer does not run any server for HabitPath, does not receive your data, and does not sell or share it. HabitPath has no accounts, no sign-in, no analytics SDK and no third-party SDKs. HabitPath does not request the internet permission and does not send your data anywhere.</p>
+
+<h2>What is stored on your device</h2>
+<ul>
+  <li><strong>Habits and check-ins.</strong> Habit names, targets, units, routine groups, schedules, notes, check-ins by local date, rest days and pauses are kept in a single JSON file in the app's private storage.</li>
+  <li><strong>Colours, icons and milestones.</strong> Each habit's colour and icon are part of the same JSON file. A milestone record keeps the date it was reached and whether you have closed its card.</li>
+  <li><strong>Preferences.</strong> Whether reminders are on and your theme choice (system, light or dark) are kept in the app's private preferences.</li>
+  <li><strong>Reminder schedules.</strong> Android's alarm service holds one scheduled reminder per habit, so that a notification can be shown at the time you chose. These are removed when you delete a habit or all data.</li>
+  <li><strong>Widget refresh.</strong> While a HabitPath widget is on your home screen, Android's alarm service holds one alarm for local midnight, so the widget shows the new day. It is removed when no widget is placed.</li>
+</ul>
+<p>The app's private storage can only be read by HabitPath itself. Uninstalling HabitPath removes it.</p>
+
+<h2>Reminders and notifications</h2>
+<ul>
+  <li><strong>Permission.</strong> HabitPath asks for permission to post notifications only when you turn reminders on in Settings. Reminders are off until you turn them on.</li>
+  <li><strong>What a notification shows.</strong> The habit name and a short line of text. Notifications are created on your phone and are not sent to any server.</li>
+  <li><strong>After a restart.</strong> HabitPath listens for the device restart, package update, time-zone change and clock change broadcasts so that it can schedule your reminders and the widget's midnight refresh again. It does not run in the background otherwise.</li>
+</ul>
+
+<h2>Home-screen widget</h2>
+<ul>
+  <li><strong>What it shows.</strong> The names, icons and progress of habits due today, and the check-off buttons. It reads the same file as the app, which is in the app's private storage.</li>
+  <li><strong>Taps.</strong> A check-off or add-one tap changes that same file on your phone. Nothing is sent anywhere.</li>
+  <li><strong>Refresh.</strong> The widget refreshes when you change data in the app, at local midnight, and after a restart or a time-zone or clock change.</li>
+  <li><strong>Permissions.</strong> The widget needs no permission beyond those listed below.</li>
+</ul>
+
+<h2>Backup, export and restore</h2>
+<p>HabitPath saves files only where you choose, with Android's system file picker:</p>
+<ul>
+  <li><strong>CSV export.</strong> A spreadsheet with one row per check-in. It contains the habit names and any notes you wrote.</li>
+  <li><strong>JSON backup.</strong> A readable file with your habits, their colours and icons, check-ins, skipped days, pauses and milestone records. It is not encrypted.</li>
+  <li><strong>Restore.</strong> You can open a JSON backup from a file you choose. Restoring replaces the data in HabitPath, and the app asks you to confirm first.</li>
+</ul>
+<p>Files you save go to the location you pick, such as a folder on your phone or a cloud storage app. That app handles the file under its own terms. HabitPath never receives your cloud account details.</p>
+<p>Android's own cloud backup is turned off for HabitPath, so your habits are not copied to your Google account backup.</p>
+
+<h2>Network</h2>
+<p>HabitPath does not use the internet. It does not contact the developer, Google or any other service to load or send your habits.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Notifications (POST_NOTIFICATIONS).</strong> To show habit reminders you turn on.</li>
+  <li><strong>Run at startup (RECEIVE_BOOT_COMPLETED).</strong> To schedule your reminders again after a restart.</li>
+</ul>
+<p>HabitPath does not ask for location, contacts, camera, microphone, photos or files beyond the save and open dialogs described above.</p>
+
+<h2>Data deletion</h2>
+<p>Settings &gt; About &gt; Delete all data removes every habit, check-in, skipped day, pause and milestone record from the app's private storage, cancels the scheduled reminders and the widget's midnight refresh. Files you saved through CSV export or JSON backup are yours and stay where you saved them; delete them in the app that holds them. Uninstalling HabitPath also removes its private data. The developer holds no copy of your data, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>HabitPath is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

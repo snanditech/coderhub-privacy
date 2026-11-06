@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KeyTick Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>KeyTick Privacy Policy</h1>
+<p class="meta">App: KeyTick (com.coderhub.keytick) · Developer: CoderHub26 · Effective: 6 November 2026</p>
+
+<h2>Summary</h2>
+<p>KeyTick is an authenticator app. It creates the one-time codes (TOTP, RFC 6238) that websites and apps ask for when you sign in with two-step verification. KeyTick keeps your codes and their secret keys on your phone. KeyTick has no accounts, no sign-up and no cloud sync. The developer does not run any server for KeyTick, does not receive your codes, secret keys or backups, and does not sell or share your data. KeyTick does not request the Android internet permission, so the app itself cannot send data over the network.</p>
+
+<h2>Codes and secret keys on your device</h2>
+<ul>
+  <li><strong>Where they are kept.</strong> The accounts you add (issuer, account name, group, secret key, algorithm, digits and period) are stored in a single file in the app's private storage. The file is encrypted with AES-256-GCM. The key for it is held in the Android Keystore and cannot be exported from the device.</li>
+  <li><strong>Codes are not stored.</strong> A code is calculated from the secret key and the current time each time it is shown. The code is never written to disk.</li>
+  <li><strong>Settings.</strong> Your theme choice, app lock, screenshot blocking and hide-codes settings, and backup dates are kept in the app's private preferences. They contain no secret keys and no codes.</li>
+  <li><strong>Local backup snapshot.</strong> The most recent backup you created is also kept, encrypted, in the app's private storage so the recovery check can open it on this phone. The key that opens it is held in the Android Keystore.</li>
+</ul>
+
+<h2>Camera and QR codes</h2>
+<ul>
+  <li><strong>Camera.</strong> The camera is asked for only when you choose Scan QR code on the Add code screen. It is used to read a setup QR code from a service. KeyTick can also read a QR code from an image you choose. KeyTick does not need the camera to use the app; you can enter the setup key by hand.</li>
+  <li><strong>On the phone.</strong> QR codes are read on your phone with the barcode scanning component of Google ML Kit. Camera images are not stored and are not sent anywhere by KeyTick.</li>
+  <li><strong>Google Play services.</strong> ML Kit runs through Google Play services. Google's ML Kit disclosure says the SDK may send technical diagnostics to Google, such as the device model, the app's package name and version, performance and error figures, and a random identifier for each installation that is not meant to identify you. Google says this data is encrypted in transit and is not transferred to third parties. KeyTick cannot switch this off. Google's handling is described in the <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+</ul>
+
+<h2>Importing codes</h2>
+<ul>
+  <li><strong>Google Authenticator exports.</strong> You can scan the QR codes from Google Authenticator's transfer export, or choose a picture of them. KeyTick reads them on your phone and shows a list before anything is saved.</li>
+  <li><strong>Text files and pasted text.</strong> You can choose a text file with Android's file picker, or paste text, with one otpauth:// link per line. KeyTick reads only that file or text. Nothing is uploaded.</li>
+  <li><strong>Duplicates.</strong> Accounts that are already on the phone are skipped, and the list says so.</li>
+</ul>
+
+<h2>Screenshots and screen recording</h2>
+<p>KeyTick blocks screenshots and screen recording by default, and hides its preview in the recent apps list. You can turn this off in Settings. The setting is applied to the app window on your phone. KeyTick does not take, store or send screenshots.</p>
+
+<h2>Moving a code to another phone</h2>
+<p>On a code's detail screen you can choose Show QR code. KeyTick asks you to confirm first, because the QR code contains the code's secret key. The QR code is drawn on your phone, is not saved and is not sent anywhere. Screenshots are blocked on that screen. Anyone who sees the QR code can copy the code, so only show it to move the code to a device you control.</p>
+
+<h2>Biometrics and device lock</h2>
+<p>If you turn on app lock, KeyTick asks Android to confirm it is you with your fingerprint, face or device screen lock. Android performs the check and tells KeyTick only whether it succeeded. KeyTick never receives or stores biometric data. The app lock is a screen gate inside KeyTick; it does not change how the codes are stored.</p>
+
+<h2>Backup files</h2>
+<ul>
+  <li><strong>You choose the place.</strong> Backups are saved with Android's system file picker to a location you pick, such as your phone storage or a cloud app like Google Drive, OneDrive or Dropbox. KeyTick writes the file; any upload is done by the app you chose, under its own terms. KeyTick never receives your cloud account details.</li>
+  <li><strong>Encrypted.</strong> A backup is encrypted on your phone with AES-256-GCM before it is saved. The key is derived from the passphrase you set with PBKDF2-HMAC-SHA256 (150,000 iterations). KeyTick does not store the passphrase and cannot reset it.</li>
+  <li><strong>Restore.</strong> When you open a backup, KeyTick reads the file on your phone and shows what it contains before anything is added. Nothing is deleted during a restore.</li>
+  <li><strong>Android backup is off.</strong> KeyTick is excluded from Android's automatic backup and from device-to-device transfer. Your codes are not sent to Google's backup service.</li>
+</ul>
+
+<h2>Clipboard</h2>
+<p>Copying a code is always an action you take. KeyTick marks the copied code as sensitive where Android supports it, and clears the clipboard 60 seconds later, unless it can see that you copied something else in the meantime. Android controls the clipboard, so this clearing is best effort. Other apps may be able to read the clipboard while the code is there.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Camera (optional).</strong> Used only on the Add code screen to scan QR codes. Denying it does not stop manual entry.</li>
+  <li><strong>Biometrics (USE_BIOMETRIC).</strong> Used for the app lock and the lock setting prompt.</li>
+  <li><strong>Internet.</strong> Not requested. KeyTick removes the internet and network-state permissions that any library might add, so it has no network access.</li>
+  <li><strong>Advertising ID.</strong> Not requested. KeyTick contains no advertising code.</li>
+</ul>
+
+<h2>No analytics, advertising or tracking</h2>
+<p>KeyTick contains no analytics SDK, no advertising SDK, no crash reporting service and no tracking. KeyTick does not write logs of codes or secret keys. Its QR code library works offline and sends nothing.</p>
+
+<h2>Data deletion</h2>
+<p>You can delete a code at any time from its detail screen, and the codes are removed from the device with it. KeyTick does not currently have a button that deletes all data at once. Uninstalling KeyTick removes its private storage, including the encrypted codes, the local backup snapshot and the settings. Backup files you saved elsewhere are yours and stay where you saved them; delete them in the app or service where they are stored. The developer holds no copy of your data, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>KeyTick is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>
