@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recapo Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>Recapo Privacy Policy</h1>
+<p class="meta">App: Recapo: Meeting Follow-up (com.coderhub.recapo) · Developer: CoderHub26 · Effective: 7 November 2026</p>
+
+<h2>Summary</h2>
+<p>Recapo records or imports meeting audio, keeps the transcript, and helps you turn it into decisions, action items with owners and due dates, a summary and a follow-up email. Your recordings, imported audio, transcripts and notes are stored on your phone. The developer does not run a server for Recapo, does not receive your audio, transcripts or notes, and does not sell or share your data. Recapo has no accounts and no analytics SDK.</p>
+<p>The only network traffic from Recapo is (1) to the AI provider you set up yourself, if you choose to use one, (2) the ads described below, and (3) Google Play Billing for the optional subscription.</p>
+
+<h2>Recording and audio</h2>
+<ul>
+  <li><strong>Microphone.</strong> Recapo asks for the microphone permission only when you tap "Record with microphone". Recording runs as a foreground service with a persistent notification and a Stop action. Recapo never records in the background or without that notification, and it does not restart a recording by itself.</li>
+  <li><strong>Imported audio.</strong> You choose an audio file with Android's file picker. Recapo copies it into the app's private storage.</li>
+  <li><strong>Where audio is kept.</strong> Recordings and imported audio are kept only in the app's private storage on your phone. Recapo does not upload audio. Recapo does not transcribe audio on a server; the transcript is the text you paste, type or edit.</li>
+  <li><strong>Consent.</strong> Recording laws differ by place. Recapo asks you to tell everyone in the meeting, and get their agreement, before you record. The developer is not responsible for how you use recordings.</li>
+</ul>
+
+<h2>Notifications</h2>
+<p>Recapo asks for notification permission (Android 13 and later) so the recording notice can be shown. Recording still works if you refuse it, but the notice will not appear in the notification shade.</p>
+
+<h2>Transcripts, notes and search</h2>
+<p>Meetings, transcripts, summaries, decisions and action items are saved in a database in the app's private storage. Searching meetings happens on your phone. Nothing is uploaded for search.</p>
+
+<h2>AI extraction (optional, bring your own key)</h2>
+<ul>
+  <li>Recapo has no AI key of its own. Automatic summaries and action items are created only when you enter a base URL, API key and model for an OpenAI-compatible provider in Settings and run extraction.</li>
+  <li>When you run extraction, the transcript of that meeting is sent to the base URL you entered, together with the instructions Recapo sends for the meeting template. The provider is shown on the Processing screen before the request is sent. The provider handles that data under its own privacy policy and terms.</li>
+  <li>Your API key is encrypted on your phone with AES-256/GCM. The encryption key is kept in the Android Keystore and never leaves the device. The key is sent only to the base URL you entered, as an authorisation header.</li>
+  <li>AI output is labelled as AI-generated and may be inaccurate. Recapo never fills in facts that are not in the transcript by design, but you must check results against the transcript.</li>
+  <li><strong>Report a result.</strong> On the Summary tab, "Report this result" opens an email draft to the developer containing the reported summary text, the meeting title and a line for what is wrong. Nothing is sent until you send the email.</li>
+  <li>If you do not set up a provider, no transcript leaves your phone, and every other feature still works.</li>
+</ul>
+
+<h2>Follow-up email and export</h2>
+<p>The follow-up email and the Markdown export are built on your phone from the data you saved. You share them with an app of your choice through Android's share sheet. What that app does with them is up to that app.</p>
+
+<h2>Ads (AdMob) and consent</h2>
+<ul>
+  <li>The free version shows one banner ad on the home screen, and a rewarded video you can choose to watch to hide the banner for 24 hours. Ads are provided by Google AdMob.</li>
+  <li>Before any ad is requested, Recapo asks Google's User Messaging Platform (UMP) for consent, and shows the consent form when required. Ads are requested only when UMP allows it. If the consent check fails, no ads are requested.</li>
+  <li>Where Google requires it, Settings &gt; Ads privacy &gt; Privacy options lets you change your ad consent at any time.</li>
+  <li>AdMob may use the advertising ID and device and usage information to show ads, under <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
+  <li>The app currently uses Google's test ad units. This will be updated before the live release, and this policy will be updated with it.</li>
+</ul>
+
+<h2>Subscription</h2>
+<p>An optional monthly subscription, bought through Google Play, hides the banner ad. Google Play handles payment and the subscription record. Recapo keeps only a yes-or-no entitlement on your phone and checks it with Google Play when the app starts.</p>
+
+<h2>Information stored on your device</h2>
+<ul>
+  <li>Recordings and imported audio files, in the app's private storage.</li>
+  <li>The meeting database: meetings, transcripts, summaries, decisions and action items.</li>
+  <li>Settings: theme, consent, ad-free window, the subscription entitlement, the AI base URL and model, and the encrypted AI key.</li>
+</ul>
+<p>Android's cloud backup of app data is turned off for Recapo, so this data is not copied to your Google account by the system backup.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Microphone (RECORD_AUDIO).</strong> Recording a meeting in the app, only when you start it.</li>
+  <li><strong>Foreground service (microphone).</strong> Keeps an active recording running while the app is in the background, with a visible notification.</li>
+  <li><strong>Notifications (POST_NOTIFICATIONS).</strong> Shows the recording notice.</li>
+  <li><strong>Internet and network state.</strong> The AI provider you set up, AdMob, and Google Play Billing.</li>
+  <li><strong>Advertising ID.</strong> Used by AdMob for ads.</li>
+</ul>
+<p>Recapo does not ask for contacts, location, camera or photo access. Audio files are chosen through the system file picker, so Recapo does not need access to your media library.</p>
+
+<h2>Data deletion</h2>
+<p>Settings &gt; Delete all data removes every meeting, transcript, summary, decision, action item, recording, imported audio file and setting from the app. Uninstalling the app also removes its private data. Copies you have shared or exported are yours and stay where you sent them. The developer holds no copy of your data, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>Recapo is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

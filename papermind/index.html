@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Papermind Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>Papermind Privacy Policy</h1>
+<p class="meta">App: Papermind – AI PDF Assistant (com.coderhub.papermind) · Developer: CoderHub26 · Effective: 7 November 2026</p>
+
+<h2>Summary</h2>
+<p>Papermind is a PDF reader with search, notes and optional AI answers. Your PDFs, their extracted text, search index, notes, highlights and chats are stored on your phone. The developer runs no server for Papermind, has no accounts, and receives none of your documents. The only network use is described below: optional AI requests to a provider you set up yourself, ads from Google's advertising SDK, and Google Play for purchases.</p>
+
+<h2>Documents you open</h2>
+<ul>
+  <li><strong>How files arrive.</strong> You pick a PDF with Android's file picker, or you share a PDF to Papermind from another app. Papermind reads only the PDF you chose. It does not request access to all files or to your photos.</li>
+  <li><strong>What is stored.</strong> Papermind copies the PDF into its private app storage. It extracts the text of each page, splits the text into passages, and keeps them in a private database for reading, search and questions.</li>
+  <li><strong>Scanned pages.</strong> When a page has little or no text, Papermind reads it with Google ML Kit text recognition, which runs on your phone. The page image is not sent anywhere.</li>
+  <li><strong>Duplicates.</strong> Papermind computes a SHA-256 fingerprint of each file so the same PDF is not imported twice. The fingerprint stays on your phone.</li>
+</ul>
+
+<h2>Search, notes and highlights</h2>
+<p>Search across your documents, page notes, highlights and the on-device answers run entirely on your phone. Notes and highlights are stored locally. You can export notes for one document as a Markdown file; the file is created on your phone and goes wherever you save or share it.</p>
+
+<h2>Optional AI answers (you bring your own key)</h2>
+<ul>
+  <li><strong>Off by default.</strong> Papermind ships with no AI key and no AI provider. AI is used only if you enter an API key and an https endpoint in Settings. Without a key, questions are answered by an on-device search that lists matching passages with their page numbers. Nothing is sent over the network in that mode.</li>
+  <li><strong>What is sent.</strong> When you use an AI feature (ask a question, summarize, summarize by section, extract facts, or translate), Papermind sends your request and the document excerpts needed for it to the endpoint you set. For a question this is your question and up to 5 excerpts of about 1,800 characters each. The screen shows the host name the text is sent to. Papermind never sends the whole PDF in one request, and never sends your library, notes or other documents.</li>
+  <li><strong>Your key.</strong> The key is encrypted with AES-256-GCM. The encryption key is held in the Android Keystore and cannot be read by other apps. The key is never written to logs and is sent only to the https endpoint you configured.</li>
+  <li><strong>Provider.</strong> The provider you choose handles the request under its own privacy policy. The developer does not see your key or your requests.</li>
+</ul>
+
+<h2>Reporting an AI result</h2>
+<p>Each AI result has a "Report this result" action. It opens an email to the developer, pre-filled with the AI output you choose to send. Papermind does not send it for you, and you can edit or cancel it before sending.</p>
+
+<h2>Ads</h2>
+<p>Papermind shows one banner ad on the library screen, and offers a rewarded video that turns the banner off for 24 hours. Ads are provided by Google AdMob. Papermind loads ads only after the Google User Messaging Platform reports that ads may be requested, which includes showing a consent form where the law requires one. Ads use the advertising ID that Android provides; you can reset or delete it in your Android settings. You can change your consent at any time with "Ad privacy options" in Settings, when that option is shown. Google's handling of ad data is described in its <a href="https://policies.google.com/privacy">privacy policy</a>.</p>
+
+<h2>Subscription</h2>
+<p>The optional subscription that removes the banner is sold through Google Play Billing. Papermind receives only the purchase status from Google Play. It does not receive your payment details.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Internet and network state.</strong> Used for the optional AI requests you configure, for ads, and for Google Play Billing.</li>
+  <li><strong>Advertising ID.</strong> Used by the ad SDK, as described above.</li>
+</ul>
+<p>Papermind does not request storage, photo, camera, microphone or location permissions.</p>
+
+<h2>Backups</h2>
+<p>Android's automatic cloud backup is turned off for Papermind, so your documents, notes and settings are not copied to Google Drive. Your API key is protected by the Android Keystore and would not be usable on another device in any case.</p>
+
+<h2>Data deletion</h2>
+<p>Settings &gt; Delete all data removes every document, its extracted text, search index, notes, highlights, chats, the saved API key and all settings. Removing a single document in the library deletes its file and all of its pages, notes and chats. Uninstalling the app also removes its private data. The developer holds no copy of your data, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>Papermind is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

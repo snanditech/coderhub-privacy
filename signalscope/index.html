@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SignalScope Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>SignalScope Privacy Policy</h1>
+<p class="meta">App: WiFi &amp; Network Analyzer (SignalScope) (com.coderhub.signalscope) · Developer: CoderHub26 · Effective: 7 November 2026</p>
+
+<h2>Summary</h2>
+<p>SignalScope measures your Wi-Fi and local network and shows the results on your phone. It has no accounts and no analytics, and the developer runs no server for it. Your measurements, scan history and settings are stored only on your phone. The only data that leaves your phone is listed below: the bytes you download in a speed test you start, the ad requests made by Google AdMob in the free version, and the purchase check made by Google Play when you subscribe.</p>
+
+<h2>Location and nearby devices</h2>
+<ul>
+  <li><strong>Why it is needed.</strong> Android only lists nearby Wi-Fi networks and gives the name (SSID) and address (BSSID) of the network you are connected to when the app has the location permission. On Android 13 and later, the nearby Wi-Fi devices permission is also requested.</li>
+  <li><strong>What it is used for.</strong> Only to read Wi-Fi network information. SignalScope does not use it to work out where you are, does not track your position, and does not run in the background.</li>
+  <li><strong>What is kept.</strong> Network names and signal values shown on the screens and in history are stored on your phone. Your position is never stored or sent anywhere.</li>
+  <li><strong>Limited mode.</strong> If you say no, or turn the location permission off, signal strength, link speed, band, connection facts, ping, DNS, port check, speed test, LAN scan and the subnet calculator still work. Only network names are hidden.</li>
+</ul>
+
+<h2>Network checks you start</h2>
+<ul>
+  <li><strong>Ping.</strong> Measures how long a TCP connection to a host and port you enter takes. You choose the host.</li>
+  <li><strong>DNS lookup.</strong> Asks the DNS servers your network already uses to resolve a name you enter.</li>
+  <li><strong>Port check.</strong> Opens and closes a TCP connection to the ports you enter on a host you choose. No data is sent.</li>
+  <li><strong>LAN device scan.</strong> Connects to a small set of common ports (22, 80, 139, 443, 445, 8080) on each address in your own local subnet, and records which addresses answered. Only your attached local network is scanned, never a remote range.</li>
+  <li><strong>Speed test.</strong> Downloads data from the HTTPS endpoint set in Settings (by default a public speed test endpoint run by Cloudflare). It runs only when you press the button and stops at the data cap you set, 25 to 512 MB. The bytes are sent to that endpoint as normal web requests, so that endpoint sees your IP address.</li>
+  <li><strong>Subnet calculator.</strong> Pure arithmetic on the address you type. Nothing is sent.</li>
+</ul>
+
+<h2>Advertising (free version)</h2>
+<p>The free version shows a banner on the dashboard, and you can watch an optional video to turn ads off for 24 hours. These ads are served by Google AdMob, which uses the Android advertising ID and sends the ad request, your IP address and device information to Google. Before any ad is requested, the app asks Google's User Messaging Platform for consent where the law requires it. If consent is not given, no ad is requested. Where your region requires it, Settings &gt; Ads and privacy shows a Privacy options button that lets you change your choice. Google's handling of this data is described in the <a href="https://policies.google.com/technologies/partner-sites">Google advertising policy</a>.</p>
+
+<h2>Subscription</h2>
+<p>An optional subscription removes the dashboard banner. Payment and subscription management are handled by Google Play Billing under Google's terms. The app asks Google Play whether the subscription is active, and the developer never receives your payment details or Google account information.</p>
+
+<h2>Information stored on your device</h2>
+<ul>
+  <li><strong>Signal samples.</strong> Signal strength and link speed you save from the Signal screen.</li>
+  <li><strong>LAN devices.</strong> IP addresses found by your LAN scans, with the times they were first and last seen. Android does not give apps MAC addresses or device names, so these are not stored.</li>
+  <li><strong>Ping results.</strong> Latency results from the ping tool.</li>
+  <li><strong>Settings.</strong> Theme, units, the speed test endpoint and cap, limited mode, and whether onboarding was completed.</li>
+</ul>
+<p>Saved history is kept for 30 days and older entries are deleted when the app starts. You can delete everything from History (Clear all) or from Settings (Clear all app data). The app's own backup to the cloud is turned off, so this data is not copied by Android backup.</p>
+
+<h2>Sharing and exports</h2>
+<p>Tools &gt; Export creates a text summary or a CSV file of the networks in range. Nothing is sent by SignalScope. The file is handed to the Android share sheet, and it goes wherever you choose: a messaging app, email, a file app, or a cloud service. The summary can include network names, network addresses, IP addresses of your router and devices, and signal values. Review it before you share it.</p>
+
+<h2>What SignalScope does not do</h2>
+<ul>
+  <li>It does not collect analytics, crash reports or advertising profiles beyond the ads described above.</li>
+  <li>It does not sniff or capture packets, read traffic, collect passwords, or change your router or Wi-Fi settings.</li>
+  <li>It does not use root access, and it does not run ping or other shell commands.</li>
+  <li>It does not send your data to the developer. The developer has no server and no copy of your data.</li>
+</ul>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Location (precise).</strong> Needed by Android to read Wi-Fi network names, as described above.</li>
+  <li><strong>Nearby Wi-Fi devices (Android 13 and later).</strong> Lets the app scan for nearby Wi-Fi networks. The app does not use it to derive location.</li>
+  <li><strong>Internet and network state.</strong> Speed test, the checks you start, and ads when consent allows.</li>
+  <li><strong>Change Wi-Fi state.</strong> Lets the app ask Android for a new Wi-Fi scan. Android limits how often this can run.</li>
+  <li><strong>Advertising ID.</strong> Used by Google AdMob for ads in the free version.</li>
+</ul>
+
+<h2>Data deletion</h2>
+<p>Settings &gt; Clear all app data deletes all saved samples, devices, ping results and settings on your phone. Uninstalling the app removes all of its data. The developer holds no copy of your data, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>SignalScope is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

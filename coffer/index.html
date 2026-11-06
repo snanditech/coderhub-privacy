@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffer Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+</style>
+</head>
+<body>
+<h1>Coffer Privacy Policy</h1>
+<p class="meta">App: Coffer (com.coderhub.coffer) · Developer: CoderHub26 · Effective: 7 November 2026</p>
+
+<h2>Summary</h2>
+<p>Coffer is a vault for logins, cards and secure notes. Everything you store is encrypted on your phone. Coffer has no account, no cloud sync and no server of its own. The developer does not receive your vault contents, passphrases, backups or CSV imports. Coffer shows a banner ad from Google AdMob on the home screen. The ad service is described below.</p>
+
+<h2>Your vault stays on your phone</h2>
+<ul>
+  <li><strong>What is stored.</strong> Item titles and categories, and the encrypted contents of each item (usernames, passwords, card numbers, notes), are kept in the app's private database on your phone.</li>
+  <li><strong>Encryption.</strong> Each item is encrypted with AES-256-GCM. The key is derived from your master passphrase with PBKDF2-HMAC-SHA256 (150,000 iterations). The passphrase and the key are never stored. If you turn on fingerprint unlock, the vault key is wrapped with a key in the Android Keystore that needs your fingerprint for each use.</li>
+  <li><strong>No recovery.</strong> The developer cannot read or reset your vault. If you lose the passphrase and have no backup, the data cannot be recovered.</li>
+</ul>
+
+<h2>Backup files you save</h2>
+<p>Export writes one encrypted file to a location you choose with Android's system file picker. The file is protected by a backup passphrase you enter. Coffer does not send the file anywhere. Where the file goes after you save it (for example a cloud app you pick) is up to that app and its own terms.</p>
+
+<h2>CSV import</h2>
+<p>You can import logins from a CSV file exported by another password manager. You choose the file with the system file picker. Coffer reads it on your phone and stores each login encrypted. The CSV file itself is not encrypted and is not changed or deleted by Coffer. Delete it yourself after importing.</p>
+
+<h2>Ads (Google AdMob)</h2>
+<ul>
+  <li><strong>Banner ad.</strong> The home screen shows a banner from Google AdMob. Rewarded videos can turn the banner off for 24 hours. Ads are not shown on the screens where you view, edit or copy secrets.</li>
+  <li><strong>Consent.</strong> Before any ad loads, Coffer asks Google's User Messaging Platform (UMP) for your consent status. Coffer shows the consent form when UMP requires it. Ads load only when UMP says ads can be requested. If the consent check fails, no ads load.</li>
+  <li><strong>Privacy options.</strong> In Settings, the "Privacy options" button appears when your region requires it. It opens Google's form, where you can change your ad choices.</li>
+  <li><strong>Data sent to Google.</strong> AdMob receives the advertising ID of your device and ad request data (such as device model, app version, language and approximate region) so it can show ads. Google handles this under its own terms: <a href="https://policies.google.com/privacy">Google privacy policy</a> and <a href="https://policies.google.com/technologies/ads">how Google uses data from sites and apps</a>.</li>
+  <li><strong>What is never sent.</strong> Vault contents, titles, passphrases, backup files and CSV files are never sent to the ad service.</li>
+</ul>
+
+<h2>Pro subscription</h2>
+<p>An optional subscription, bought through Google Play Billing, turns off the ads. Google Play processes the payment and tells Coffer whether the subscription is active. Coffer does not receive your payment details.</p>
+
+<h2>Network use</h2>
+<p>Coffer needs internet access only for ads and the subscription check. Vault features work fully offline: adding, viewing, searching, exporting, importing and generating passwords do not use the network.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Biometric (USE_BIOMETRIC).</strong> Optional fingerprint unlock.</li>
+  <li><strong>Internet and network state.</strong> Ads and the subscription check, described above.</li>
+  <li><strong>Advertising ID (AD_ID).</strong> Used by the ad service, described above.</li>
+</ul>
+<p>Coffer does not request camera, location, contacts, storage or notification permissions.</p>
+
+<h2>Security settings that protect your data</h2>
+<ul>
+  <li>Screenshots and the recent apps preview are blocked.</li>
+  <li>The vault locks after the idle or background time you choose (1, 2, 5 or 15 minutes).</li>
+  <li>Copied passwords are removed from the clipboard after 60 seconds.</li>
+  <li>Android's cloud backup and device transfer of app data are turned off.</li>
+</ul>
+
+<h2>Analytics</h2>
+<p>Coffer contains no analytics or crash-reporting SDK. The developer receives no usage data from the app.</p>
+
+<h2>Data deletion</h2>
+<p>Settings &gt; Delete all data removes every vault item, reminder, audit log entry, setting and the biometric key stored on the phone. Uninstalling the app also removes its data. Ad data held by Google is governed by Google's policies, linked above. The developer holds no copy of your data, so there is nothing to request from us.</p>
+
+<h2>Children</h2>
+<p>Coffer is not designed for children under 13 and does not knowingly collect personal information from anyone.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>
