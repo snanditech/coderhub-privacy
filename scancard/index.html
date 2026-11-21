@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScanCard Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>ScanCard Privacy Policy</h1>
+<p class="meta">App: ScanCard (scancard) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>ScanCard keeps business cards as searchable contacts, with an optional private photo, and can export CSV or vCard or show your own card as a QR code. It has <strong>no OCR and no AI</strong>: it does not read text from a photo. It has no account, no developer server and no INTERNET permission.</p>
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p><ul><li><code>scancard.json</code> (with a local <code>.bak</code> copy and quarantined corrupt files): contacts with name, company, job title, phone, email, website, address, notes, tags and the photo file name; your own My Card details; and timestamps.</li><li>Private card photos under <code>files/photos/card-*.jpg</code>, capped at 1600 px and saved as JPEG. Temporary <code>capture-*.jpg</code> copies from the camera or image picker are limited to 25 MB and stale captures older than 24 hours are removed at startup; saved photos no contact refers to are also removed.</li><li>Private preferences: theme.</li></ul><p>These are <strong>contact details and potentially personal information</strong> about other people. The app does not add its own encryption; records and photos rely on Android's app sandbox and device storage encryption. It does not read the phone address book.</p>
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded to the developer. The app declares no <code>INTERNET</code> permission and contains no developer server, advertising or analytics code.</p><p>Exports leave only when you choose them: the CSV is written through the system file picker; a contact's vCard is handed to Android's share sheet; your own card is displayed as a QR code on screen; and the email action opens a mail app. CSV and vCard contain the contact fields above, including phone, email, address and notes. The receiving app or storage provider keeps its own copy under its own policy and may use a network.</p>
+<h2>Permissions</h2>
+<p>The app declares no Android runtime permission. It has no <code>CAMERA</code> permission: photo capture is delegated to the phone's camera app through the system capture contract, and the image picker is the system document picker. A non-exported <code>FileProvider</code> exposes only <code>files/photos/</code> for that single capture. The app does not request storage, contacts, location, microphone or notification access.</p>
+<p>Like any Android app built with AndroidX, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (the manifest sets <code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its current rules exclude the <code>database</code>, <code>sharedpref</code>, <code>file</code> and <code>root</code> domains from cloud backup. The file does not add a separate <code>device-transfer</code> block, so do not treat the extraction XML alone as a guarantee against every OEM migration tool; the manifest's backup switch is the primary control.</p>
+<h2>Photos and contact PII</h2><p>ScanCard does not recognise text in a photo. A saved photo is a visual reference only and is not searched as text. Contact details can include another person's phone, email, address and notes; use the app only for information you are entitled to keep, and use the device lock. Deleting a contact deletes its saved photo; replacing a photo removes the old saved copy only after the contact record is saved. Shared or exported copies are outside the app.</p><h2>Exports</h2><p>CSV cells that could start a spreadsheet formula are neutralised with an apostrophe. vCard 3.0 is folded at the standard octet limit, including non-ASCII text. QR content is a compact MECARD payload and is shown on screen, not transmitted by the app. A card too long for the built-in QR code can still be shared as vCard text.</p>
+<h2>Ads, accounts and purchases</h2>
+<p>The app has no user accounts and no sign-in. There are no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell any data from the app.</p>
+<h2>Children</h2>
+<p>ScanCard is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+<h2>Data deletion</h2>
+<p>Delete a contact in the app to delete its record and saved photo. Reset all in Settings or clear the app's storage from Android Settings &gt; Apps &gt; ScanCard &gt; Storage. Uninstalling the app deletes its private storage. CSV/vCard files you exported or shared, and mail you sent, are outside the app and remain until you delete them. There is no developer server copy.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

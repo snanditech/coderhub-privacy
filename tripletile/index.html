@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://snanditech.github.io/coderhub-privacy/tripletile/">
+<title>Tripletile Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>Tripletile Privacy Policy</h1>
+<p class="meta">App: Tripletile (tripletile) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>Tripletile is an offline single-player triple-tile matching puzzle. It keeps the current board, generated solution, daily challenge and local statistics on this device. It has no account, no developer server and no <code>INTERNET</code> permission. There are no online rooms, leaderboards, cloud saves, ads, analytics or purchases.</p>
+
+<h2>What the app stores on your device</h2>
+<p>Tripletile keeps two JSON files in its private storage under <code>files/tripletile</code>:</p>
+<ul>
+  <li><code>game.json</code>: the current board, including tile stacks and tile identifiers, tray, generated solution order, generator seed, daily date, score, matches, game status, shuffles left, hints left and the highlighted hint stack.</li>
+  <li><code>stats.json</code>: best score, boards cleared, games played, total matches, all-time daily best, last daily date and daily streak.</li>
+</ul>
+<p>Private app preferences store the theme and the chosen tile theme (shapes, fruits or animals). A short-lived <code>.tmp</code> file is used while saving.</p>
+<p>Tripletile does not ask for your name, email, contacts, location, photos, microphone, camera or any account. The board and statistics are game data, not a profile.</p>
+<p>The files are not separately encrypted by Tripletile. They rely on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded or shared. Tripletile declares no <code>INTERNET</code> permission and contains no network code, advertising, analytics or billing SDK. It has no share or export feature. Boards are generated locally from a seed; no board, score or identifier is sent to a server.</p>
+
+<h2>Permissions</h2>
+<p>Tripletile declares no Android runtime permission. It does not request storage, location, camera, microphone, contacts, notification access or an exact alarm. Like any Android app built with AndroidX, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>; it is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Daily board, undo and shuffle</h2>
+<p>The daily board is derived from the device's local calendar date. Changing the device date or time zone can change which daily board appears and how a streak is counted. Campaign stats and the saved board are local to this installation.</p>
+<p>Undo history is kept in memory for the current session and is not saved after the app is closed. The saved board includes the generated solution so the puzzle can resume, but no online solver or server is used. Shuffle and hints operate only on the remaining local tiles; a particular play order can still fill the tray, and no board is guaranteed to be finishable after every mistake.</p>
+
+<h2>Tile symbols and fonts</h2>
+<p>The shape theme uses Unicode geometric symbols. The fruit and animal themes use the device's emoji font; Tripletile does not bundle fruit or animal artwork and does not download any. Their exact appearance, colour and rendering can vary by Android version and system font, and a device without colour emoji may show simpler glyphs. No third-party level pack or audio is bundled.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for Tripletile: the manifest sets <code>allowBackup=false</code> and <code>fullBackupContent=false</code>. The app's extraction rules also exclude the <code>database</code> and <code>sharedpref</code> domains from cloud backup, but they do not include a separate <code>device-transfer</code> block and do not name the <code>files/tripletile</code> records individually. The manifest switch is the primary control.</p>
+<p>This policy does not claim that a manufacturer's device-to-device transfer tool, a rooted device or a forensic copy cannot access app data. To remove the app's data reliably, clear its storage in Android settings or uninstall it. If backup behaviour is ever re-enabled, the extraction rules should be widened before this page can claim that app files are excluded.</p>
+
+<h2>Deletion</h2>
+<p>Tripletile has no in-app button that resets all statistics. “Start a new board” discards the current board but leaves campaign progress and statistics in place. If the saved board is unreadable, the recovery option can discard it without resetting statistics.</p>
+<p>To delete all Tripletile data, clear the app's storage from Android Settings &gt; Apps &gt; Tripletile &gt; Storage, or uninstall the app. There is no developer server copy to delete, and no shared score or board copy outside the app.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>Tripletile has no user accounts and no sign-in. There are no ads, no in-app purchases, no paid shuffles and no timers. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>Tripletile is a casual puzzle game and is not directed at children under 13. It has no accounts, chat or online features and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://snanditech.github.io/coderhub-privacy/presidently/">
+<title>Presidently Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>Presidently Privacy Policy</h1>
+<p class="meta">App: Presidently (presidently) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>Presidently is an offline President (Scum) card game for three to seven players, with an on-device bot, pass-and-play, rank exchange and an optional revolution rule. It has no account, no developer server and no <code>INTERNET</code> permission. There are no online rooms, ads, in-app purchases or leaderboards.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+<li><code>files/presidently/game.json</code> and a previous-good copy <code>game.bak</code>: the current or most recent round, including player count, revolution/exchange options, seed/RNG state, round number, every hand, discard pile, turn and leader, current play, passed flags, revolution state, finish order, rank order, scores, exchange index, pending exchange and match winner. It does not contain player names, contacts or an account identifier.</li>
+<li><code>files/presidently/stats.json</code>: rounds played, presidencies, vice-presidencies, times Scum, matches won, best score, and current and best top-half streaks.</li>
+<li>Private preferences in the app's <code>settings</code> SharedPreferences: theme, number of players, revolution switch, exchange switch, pass-and-play, bot level, large-card mode and fast-bot mode.</li>
+</ul>
+<p>Writes use a temporary file and rename. A previous good round is kept as <code>game.bak</code>; an interrupted write can leave a <code>.tmp</code> file until it is overwritten or app storage is cleared. The app does not add its own encryption; these files rely on Android's app sandbox and device storage encryption.</p>
+
+<h2>What leaves the device</h2>
+<p>The app itself has no upload path and no network permission. There is no developer server, advertising, analytics, telemetry or billing code, and no user account.</p>
+<p>There is no share sheet, export, print, cloud-sync or backup/restore feature in the source. Saved rounds, statistics and preferences are not sent to CoderHub26. A copy outside the app's private files could come from Android or an original-equipment-manufacturer backup/transfer mechanism, described below, or from someone with access to the unlocked device or the app's data.</p>
+
+<h2>Permissions</h2>
+<p>The app declares no Android runtime permission. It does not request storage, camera, microphone, location, contacts, notification or network access. The only exported component is the launcher activity.</p>
+<p>Like most AndroidX apps, the merged manifest can also contain the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off in the manifest (<code>allowBackup=false</code> and <code>fullBackupContent=false</code>). The app's <code>data_extraction_rules.xml</code> currently excludes only the <code>database</code> and <code>sharedpref</code> domains from cloud backup. It does not name the app's <code>files/</code> JSON records and has no separate <code>device-transfer</code> block. The manifest switch is the primary control, and the extraction rules are narrower than a blanket exclusion.</p>
+<p>This page does not claim that device-to-device transfer or an OEM backup is impossible. There is no developer server copy to delete, and there is no app-level encryption beyond the Android app sandbox and device storage encryption.</p>
+
+<h2>Pass-and-play and local concealment</h2>
+<p>In pass-and-play, the app hides the acting player's hand behind a hand-off screen until that player taps to reveal it, including during the rank exchange. This is local concealment on one shared phone. It is <strong>not</strong> user authentication, a PIN, biometrics, a separate user profile or cryptographic protection, and it does not stop someone who has the unlocked phone or access to the app's private storage from reading the saved hands. Statistics are not recorded for pass-and-play matches in this version.</p>
+
+<h2>Rules, house options and limits</h2>
+<p>Presidently supports three to seven players with a standard 52-card pack, rank order 3 through ace with 2 highest, sets of equal rank, higher same-size beats and passing. The three of clubs opens the first round; later rounds are led by the President. Passes do not bar re-entry in the same trick, and compulsory beating and jokers are not included.</p>
+<p>The app uses zero-sum place points and a target of 11. A set of four equal cards reverses the rank order for the rest of the round but does not reverse the direction of play; another set of four reverses it back. The exchange gives the Scum's best card or cards to the President and one card between Vice-President and Vice-Scum with four or more players. These are documented house choices, not a claim to every regional President variant or a full rule referee.</p>
+
+<h2>Ads, accounts, purchases and gambling</h2>
+<p>There are no user accounts or sign-in, no ads, no in-app purchases, no coins, no real-money play and no betting or wagering feature. The app does not use advertising, analytics, telemetry or billing SDKs. CoderHub26 does not collect, receive or sell data from the app.</p>
+
+<h2>Children</h2>
+<p>Presidently is a card game and is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Retention and deletion</h2>
+<p>Starting a new match replaces the current saved round; the previous good copy can remain as <code>game.bak</code> until it is overwritten. There is no in-app statistics-reset button in this version, so statistics and preferences remain until you clear the app's storage or uninstall the app.</p>
+<p>To remove all app data, use Android Settings &gt; Apps &gt; Presidently &gt; Storage &gt; Clear storage, or uninstall Presidently. That removes the private round, backup, statistics and preference files. There is no exported or developer-server copy to delete because the app has no export or network feature.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

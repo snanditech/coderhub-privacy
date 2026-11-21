@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DryTone Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>DryTone Privacy Policy</h1>
+<p class="meta">App: DryTone (drytone) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>DryTone is a speaker-cleaning tone generator for Android. It plays sweeps and test tones generated on the phone. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>DryTone stores only your settings: theme, the last chosen output (earpiece or loudspeaker) and whether vibration is on.</p><p>It stores no recordings and no tone history. Tones are generated live with <code>AudioTrack</code>; the app never records audio and keeps no sound files.</p><p>The settings are in the app's private <code>SharedPreferences</code>. Android's automatic backup is turned off for DryTone (the manifest sets <code>allowBackup=false</code>), so Android does not copy them to Google Drive.</p>
+
+<h2>What leaves your device</h2>
+<p>No files leave the app, and there is no share or export action. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else. The app does not use the microphone and does not record what it plays.</p>
+
+<h2>Permissions</h2>
+<p>The app declares only these permissions:</p>
+<ul>
+  <li><code>VIBRATE</code> &mdash; the optional vibration pulse while a cleaning tone runs. It is not used when vibration is off.</li>
+  <li><code>MODIFY_AUDIO_SETTINGS</code> &mdash; lets the app switch audio routing between the earpiece and the loudspeaker for the output you choose, then restore the previous mode. It does not change the system volume.</li>
+</ul>
+<p>Both are normal permissions granted at install time; DryTone does not show a runtime prompt for them, and neither permission gives access to your files, microphone or location.</p>
+
+<h2>Audio and vibration</h2>
+<p>Tones are generated on the phone and played through the output you pick, at a capped amplitude. The app does not change the system volume.</p>
+<p>Earpiece playback temporarily changes the audio mode on devices that support it, and the previous mode and speakerphone state are restored afterwards. Playback stops when the app leaves the foreground, when headphones are unplugged or when another app takes the audio output. Vibration is cancelled on every stop path and ignored on devices without a vibrator.</p>
+<h2>Ads, accounts and purchases</h2>
+<p>DryTone has no user accounts and no sign-in. There are no ads and no in-app purchases, and the developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>DryTone is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling DryTone removes its settings. There is no user content to delete. You can also clear the settings from Android Settings &gt; Apps &gt; DryTone &gt; Storage &gt; Clear storage. Because the app creates no files outside its own storage, uninstalling leaves nothing behind.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

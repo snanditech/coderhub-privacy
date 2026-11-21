@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataMeter Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>DataMeter Privacy Policy</h1>
+<p class="meta">App: DataMeter (datameter) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>DataMeter shows today's mobile and Wi-Fi data from the phone's own counters, keeps a daily limit, lists per-app use and can show live speed. Everything is read and calculated on the phone. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+  <li>Settings only: the daily limit, alert percentage, the date of the last limit alert, the plan validity date, whether the status-bar speed readout is on, and the theme.</li>
+</ul>
+<p>These values are private preferences in the app's storage. DataMeter does not build its own usage database: each chart is queried from the system counters when you open it. Android's automatic backup is turned off for DataMeter (the manifest sets <code>allowBackup=false</code>), so Android does not copy these settings to Google Drive.</p>
+<p>DataMeter does not add its own encryption to its settings; they rely on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing is uploaded. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else.</p><p>The app has no share or export feature, so it creates no copies of your data outside its own storage.</p><p>Usage figures are read from the phone and displayed; they are not written to a file and not sent anywhere. The home-screen widget reads today's total locally.</p>
+<h2>Usage access</h2>
+<p>DataMeter declares <code>PACKAGE_USAGE_STATS</code>. This is a special app access, not a runtime permission: Android does not show a normal prompt, and you grant it in Settings &gt; Apps &gt; Special app access &gt; Usage access. It lets the app read the system's per-network and per-app byte counters. Without it you can still see live speed, but daily totals and per-app figures are unavailable. The access can be revoked at any time in the same Settings page. DataMeter cannot see the content of your traffic, only byte counts.</p>
+
+<h2>Optional foreground service and notifications</h2>
+<p>The status-bar speed readout is off by default. When you switch it on, DataMeter starts a foreground service with an ongoing notification showing the current speed, declared with type <code>specialUse</code> and subtype <code>network_speed_status_bar_indicator</code> because Android has no dedicated type for a speed indicator. Switching it off stops the service and removes the notice.</p><p><code>POST_NOTIFICATIONS</code> is used for that notice and for the single daily limit alert. Android 13+ asks when the app first needs it; you can refuse and still use the meter screens.</p>
+
+<h2>Permissions</h2>
+<p>The app declares these permissions and special access:</p><ul><li><code>PACKAGE_USAGE_STATS</code> &mdash; usage access granted by you in Android Settings, used to read system byte counters.</li><li><code>POST_NOTIFICATIONS</code> &mdash; Android 13+ runtime permission for the daily limit alert and the optional speed notice.</li><li><code>FOREGROUND_SERVICE</code> and <code>FOREGROUND_SERVICE_SPECIAL_USE</code> &mdash; only for the optional status-bar speed readout.</li></ul><p>It does not request location, camera, microphone, contacts or storage access.</p><p>Like any Android app built with AndroidX, the merged manifest also contains the library's own signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>DataMeter has no user accounts and no sign-in. There are no ads and no in-app purchases. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>DataMeter is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling DataMeter deletes its settings and removes the widget. You can also reset the limit and plan in the app, revoke usage access in Android Settings, or clear everything from Android Settings &gt; Apps &gt; DataMeter &gt; Storage &gt; Clear storage. No usage history is stored by the app to delete.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

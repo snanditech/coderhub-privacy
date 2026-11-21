@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlueScope Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>BlueScope Privacy Policy</h1>
+<p class="meta">App: BlueScope (bluescope) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>BlueScope performs a real Bluetooth LE and classic scan, lists the device names and addresses Android reports, and turns their signal strength into a relative proximity meter and optional beeps. Live scan results are held in memory only. Saved nicknames, addresses, last-seen times and place notes stay in the app's private storage. There is no account, no developer server, no GPS and no <code>INTERNET</code> permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+<li><code>files/bluescope/devices.json</code> (with a temporary replacement file and quarantined corrupt copies): each saved device's address, your nickname, the original name Android reported, last RSSI, last-seen time, a place note you type, and creation time.</li>
+<li>Private settings: theme, beep on/off, RSSI smoothing, whether unnamed devices are shown, and keep-screen-on.</li>
+</ul>
+<p>Live scan results (addresses, names, RSSI, BLE/classic type) are kept in memory while the app process is running and are not written to a scan history. They are cleared when you tap Clear results, when the app process ends or its storage is cleared, and they are not restored from disk. The app does not add its own encryption; saved entries rely on Android's app sandbox and device storage encryption. Bluetooth addresses and nicknames can identify a device or its owner, so save only what you need.</p>
+
+<h2>Bluetooth permissions and location</h2>
+<p>On Android 12 and later, BlueScope requests the Nearby-device permissions <code>BLUETOOTH_SCAN</code> and <code>BLUETOOTH_CONNECT</code>. Scan permission is declared with <code>neverForLocation</code>. Connect permission is used to read reported device names and to manage discovery.</p>
+<p>On Android 11 and older, the platform requires <code>ACCESS_FINE_LOCATION</code> (with the normal <code>BLUETOOTH</code> and <code>BLUETOOTH_ADMIN</code> permissions) for Bluetooth scans. BlueScope checks only whether Location is switched on; <strong>it does not request a location fix, does not read GPS or network coordinates, and does not store a location or location history</strong>. The location permissions are capped at Android 11 and are not requested on Android 12 or later.</p>
+<p>Because BlueScope declares that it does not use Bluetooth for location, Android may filter some scan results that could reveal location (for example certain beacon-like advertisements). A device that a location-enabled scanner can see may therefore not appear here. The app does not request background location and has no foreground service; scanning stops when the screen is hidden.</p>
+
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded to the developer. There is no <code>INTERNET</code> permission, developer server, advertising or analytics code. BlueScope has no share sheet, export, backup file or cloud sync. Scan results and saved entries stay on the phone.</p>
+
+<h2>Scan results, identity and signal limits</h2>
+<p>Names and addresses are shown only as Android reports them. BlueScope has no database that maps an address to a brand or a particular physical device. Many BLE devices rotate their address, so the same earbuds or band can appear as a new row; the app does not merge addresses by guesswork. It cannot prove which physical device a row belongs to and cannot guarantee finding a particular earbud, band or tracker.</p>
+<p>Bluetooth RSSI is a noisy relative signal-strength value, not a distance in metres and not a direction. Walls, furniture, bodies and reflections change it. The meter and hot-and-cold beeps follow the trend of the reported signal; they do not provide a reliable distance reading.</p>
+<p>A classic Bluetooth discovery result is delivered by a runtime broadcast receiver. Android requires such a receiver to be exported so the Bluetooth stack can deliver results; a privileged app on the same phone could in principle inject a fake classic-discovery broadcast, which BlueScope would display as an Android-reported result. BLE results are not delivered through that broadcast. The app validates the address and RSSI range but cannot cryptographically authenticate a broadcast device identity.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (<code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its data-extraction rules exclude the <code>file</code>, <code>database</code>, <code>sharedpref</code> and <code>external</code> domains from both cloud backup and device transfer. The developer has no server copy to restore. Saved device entries and settings therefore do not move to a new phone through Android backup or device transfer.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>There are no user accounts, no sign-in, no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell data from the app.</p>
+
+<h2>Children</h2>
+<p>BlueScope is not directed at children under 13. It has no accounts and no way to send information to the developer.</p>
+
+<h2>Retention and deletion</h2>
+<p>Delete a saved device in the app to remove its address, nickname, last-seen time and place note. Clear results to discard the in-memory scan list. Clear the app's storage in Android Settings &gt; Apps &gt; BlueScope &gt; Storage, or uninstall the app, to remove all saved entries and settings. Live scan observations are not persisted, so there is no scan history to delete. There is no developer server copy to delete.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

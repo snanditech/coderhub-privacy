@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CatalogCraft Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>CatalogCraft Privacy Policy</h1>
+<p class="meta">App: CatalogCraft (catalogcraft) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>CatalogCraft makes a product catalogue, price list PDF and single-product share images on your phone. Your shop details, products, prices and imported photos are stored in the app's private storage. There is no account, no developer server and no <code>INTERNET</code> permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+<li><code>files/catalogcraft/catalog.json</code>: the shop name, tagline, phone, WhatsApp number, address, footer note and accent colour; and each product's name, price in paise, optional compare-at price, unit, category, description, photo file name, variants and their prices, hidden flag, sort order and creation time.</li>
+<li>Private copies of photos you pick, under <code>files/catalogcraft/photos/</code>, named <code>photo-*.jpg</code>, <code>photo-*.png</code> or <code>photo-*.webp</code>. The app reads the selected image and writes its own copy; the original file in your gallery is not modified. The imported copy can still contain whatever metadata the original had.</li>
+<li>Private settings: theme, currency symbol, digit grouping, share-image size, whether photos/variants/compare-at prices are included, and JPEG quality.</li>
+</ul>
+<p>The catalogue file is replaced through a temporary file and rename. A file that cannot be decoded is copied aside as <code>catalog-corrupt-&lt;time&gt;.json</code> instead of being silently overwritten. The app does not add its own encryption; these files rely on Android's app sandbox and device storage encryption.</p>
+
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded to the developer. There is no <code>INTERNET</code> permission, developer server, advertising or analytics code.</p>
+<p>Files leave only when you choose an action:</p>
+<ul>
+<li>When you tap Share, the completed PDF or single-product JPEG is written to the app's private <code>cache/exports/</code> folder and offered to Android's share sheet. A non-exported <code>FileProvider</code> exposes only that cache folder to the app or share target you selected. When you tap Save, the file is written directly to the location you choose.</li>
+<li>A JSON backup contains the shop profile and products listed above, including phone, WhatsApp and address text, but <strong>not the photo files</strong>. You choose where to save or share it. A backup restored on another phone will refer to photos that may not exist there.</li>
+</ul>
+<p>The app hands a file to Android or to the app or storage provider you pick. That receiver keeps its own copy under its own privacy policy and may use a network. The developer does not receive it.</p>
+
+<h2>Permissions</h2>
+<p>The app declares no Android runtime permission. Photos are selected with the system photo picker or document picker; the app cannot browse your gallery by itself. There is no camera, storage, location, microphone, contacts or notification permission.</p>
+<p>Like most AndroidX apps, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (<code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its data-extraction rules exclude the <code>file</code>, <code>database</code>, <code>sharedpref</code> and <code>external</code> domains from both cloud backup and device transfer. The developer has no server copy to restore. A JSON backup that you export is the supported way to move or keep a second copy.</p>
+
+<h2>Catalogue, photos and exports</h2>
+<p>Product names, prices, shop contact text and photos are your business information. Only enter information you are entitled to use. The app does not verify prices, taxes, discounts or stock, and it is not an accounting, billing or tax system. A PDF or share image is a rendered copy; once you save or send it, deleting the product in CatalogCraft does not delete that exported file.</p>
+<p>Imported photos are decoded at a bounded size for thumbnails, the PDF and share images, so very large camera files are not kept in memory at full resolution. Old photo copies are removed when they are replaced or when the last product using them is deleted. Temporary exports in the app cache are not a permanent archive; Android or the app may clear them, and you can clear the app cache from Android Settings.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>There are no user accounts, no sign-in, no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell data from the app.</p>
+
+<h2>Children</h2>
+<p>CatalogCraft is a business tool and is not directed at children under 13. It has no accounts and no way to send information to the developer.</p>
+
+<h2>Retention and deletion</h2>
+<p>A product's private photo copy is deleted when the product is deleted or its photo is replaced, unless another product still uses the same copy. Delete products or shop details in the app. To remove everything at once, clear the app's storage in Android Settings &gt; Apps &gt; CatalogCraft &gt; Storage, or uninstall the app. That removes the private catalogue and imported photo copies. PDFs, share images and JSON backups you saved or shared are outside the app and remain in their destination until you delete them. There is no developer server copy to delete.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

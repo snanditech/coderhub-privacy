@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GuardBell Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>GuardBell Privacy Policy</h1>
+<p class="meta">App: GuardBell (guardbell) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>GuardBell watches a charging phone and sounds an alarm when the battery reaches a chosen level, the charger is removed, the phone is moved or it leaves a pocket. All monitoring happens on the phone. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+  <li>Battery history: charge level readings, charging sessions with start and end level, and their duration (seven days are kept).</li>
+  <li>Guard settings: charge threshold, which alarms are armed, sensitivity, alarm output, auto-stop length and theme.</li>
+  <li>A PIN record: a random salt and a salted SHA-256 hash of your 4 to 6 digit PIN. The PIN itself is not stored.</li>
+  <li>Which alarm is currently active, so the ongoing notice and the alarm screen can describe it.</li>
+</ul>
+<p>Battery history is a JSON file in the app's private storage; settings, the guard configuration and the PIN salt and hash are private preferences. Android's automatic backup is turned off for GuardBell (the manifest sets <code>allowBackup=false</code>), so Android does not copy this data to Google Drive.</p>
+<p>GuardBell hashes the PIN with a per-install salt and does not store the digits. It does not otherwise encrypt its records; they rely on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing is uploaded. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else.</p><p>GuardBell has no share sheet, no export and no way to send the PIN, the battery history or the alarm state off the phone.</p>
+<h2>Sensors</h2>
+<p>While the guard is armed the app reads the battery and charging state, the accelerometer for the motion alarm and the proximity sensor for the pocket alarm. These readings are used for the alarm you configured and for the seven-day charge history. They are not used for advertising, profiling or analytics, and they are not shared. Sensor use stops when you disarm the guard.</p>
+
+<h2>Foreground service and notification</h2>
+<p>GuardBell runs a foreground service only while you have armed the guard. The service keeps the monitor alive with the screen off and shows an ongoing notification describing what is armed. Its manifest type is <code>specialUse</code> because Android has no dedicated type for a battery, unplug and motion alarm; the declared subtype is <code>battery_charge_and_motion_anti_theft_alarm</code>. The service stops when the correct PIN disarms it.</p><p>On Android 13 and later, notification permission is needed for the ongoing notice and the alarm alert. Android asks when the app first needs it; you can refuse, and you can turn notifications off later in Android Settings, though the ongoing notice is part of how the service stays visible to you.</p>
+
+<h2>Permissions</h2>
+<p>The app declares these permissions:</p><ul><li><code>FOREGROUND_SERVICE</code> and <code>FOREGROUND_SERVICE_SPECIAL_USE</code> &mdash; for the armed guard service described above. They are not used at any other time.</li><li><code>POST_NOTIFICATIONS</code> &mdash; Android 13+ runtime permission for the ongoing guard notice and the alarm alert.</li><li><code>VIBRATE</code> &mdash; normal install-time permission for the alarm vibration.</li></ul><p>It does not request location, camera, microphone, contacts or storage access.</p><p>Like any Android app built with AndroidX, the merged manifest also contains the library's own signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>GuardBell has no user accounts and no sign-in. There are no ads and no in-app purchases. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>GuardBell is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling GuardBell deletes its battery history, settings and PIN hash. You can also clear the charge history in the app, or clear everything from Android Settings &gt; Apps &gt; GuardBell &gt; Storage &gt; Clear storage.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

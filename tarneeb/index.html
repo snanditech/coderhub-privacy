@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://snanditech.github.io/coderhub-privacy/tarneeb/">
+<title>Tarneeb &amp; Trix Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>Tarneeb &amp; Trix Privacy Policy</h1>
+<p class="meta">App: Tarneeb &amp; Trix (tarneeb) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>Tarneeb &amp; Trix is an offline two-game card app: four-player partnership Tarneeb and the five-contract individual game Trix. It has no account, no developer server and no <code>INTERNET</code> permission. There are no online rooms, ads, in-app purchases or leaderboards.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+<li><code>files/tarneeb/tarneeb.json</code> and a previous-good copy <code>tarneeb.bak</code>: the current or most recent Tarneeb match, including chosen target, dealer, round, every hand, bids, highest bid, contract seat, trump/no-trump choice, leader, current trick, tricks won, played cards, team scores and the last hand summary. It does not contain player names, contacts or an account identifier.</li>
+<li><code>files/tarneeb/trix.json</code> and a previous-good copy <code>trix.bak</code>: the current or most recent Trix match, including kingdom index and owner, contracts already used, chosen contract, hands, leader/turn, trick state, tricks won, deal deltas, layouts, finish order, played cards, scores and the last deal summary. The two games have separate save files.</li>
+<li><code>files/tarneeb/stats.json</code>: shared statistics for Tarneeb matches, wins and hands completed, best Tarneeb score, Trix matches, wins and deals completed, and best Trix deal score.</li>
+<li>Private preferences in the app's <code>settings</code> SharedPreferences: theme, default game, Tarneeb target, one-or-four-kingdom Trix choice, pass-and-play, bot level, large-card mode and fast-bot mode.</li>
+</ul>
+<p>Writes use a temporary file and rename. A previous good match is kept as a <code>.bak</code> file; an interrupted write can leave a <code>.tmp</code> file until it is overwritten or app storage is cleared. The app does not add its own encryption; these files rely on Android's app sandbox and device storage encryption.</p>
+
+<h2>What leaves the device</h2>
+<p>The app itself has no upload path and no network permission. There is no developer server, advertising, analytics, telemetry or billing code, and no user account.</p>
+<p>There is no share sheet, export, print, cloud-sync or backup/restore feature in the source. Saved matches, statistics and preferences are not sent to CoderHub26. A copy outside the app's private files could come from Android or an original-equipment-manufacturer backup/transfer mechanism, described below, or from someone with access to the unlocked device or the app's data.</p>
+
+<h2>Permissions</h2>
+<p>The app declares no Android runtime permission. It does not request storage, camera, microphone, location, contacts, notification or network access. The only exported component is the launcher activity.</p>
+<p>Like most AndroidX apps, the merged manifest can also contain the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off in the manifest (<code>allowBackup=false</code> and <code>fullBackupContent=false</code>). The app's <code>data_extraction_rules.xml</code> currently excludes only the <code>database</code> and <code>sharedpref</code> domains from cloud backup. It does not name the app's <code>files/</code> JSON records and has no separate <code>device-transfer</code> block. The manifest switch is the primary control, and the extraction rules are narrower than a blanket exclusion.</p>
+<p>This page does not claim that device-to-device transfer or an OEM backup is impossible. There is no developer server copy to delete, and there is no app-level encryption beyond the Android app sandbox and device storage encryption.</p>
+
+<h2>Pass-and-play and local concealment</h2>
+<p>In pass-and-play, the app hides the acting player's hand behind a hand-off screen until that player taps to reveal it. This is local concealment on one shared phone. It is <strong>not</strong> user authentication, a PIN, biometrics, a separate user profile or cryptographic protection, and it does not stop someone who has the unlocked phone or access to the app's private storage from reading the saved hands. Statistics are not recorded for pass-and-play matches in this version.</p>
+
+<h2>Supported rules and limits</h2>
+<p><strong>Tarneeb:</strong> four players in fixed partnerships, a number-only auction from 7 to 13, declarer chooses a trump suit or no trump, follow-suit trick play, and the 31/41/51/61 target options. Scoring follows the documented made/failed, kaboot and 13-bid rules. The Egyptian suit-included auction, doubling/redoubling and the 10+ card throw-in rules are not included.</p>
+<p><strong>Trix:</strong> four individual players, five contracts, one or four kingdoms, individual scores, the first kingdom owned by the 7&hearts; holder and one use of each contract per kingdom. King of Hearts, Diamonds, Queens and Collections use the documented per-trick penalties; Trix uses jacks as layouts and 200/150/100/50 finish points. Doubling/redoubling (optional in the reference), the four-twos throw-in, partnership Trix and an early end to a trick contract are not included; the four trick contracts are played in full.</p>
+<p>The interface is English-only. Layouts honour right-to-left direction, but full Arabic localisation and native Arabic review are not included. Regional Tarneeb auctions and scoring and regional Trix variants differ; this is one documented implementation, not a full regional referee.</p>
+
+<h2>Ads, accounts, purchases and gambling</h2>
+<p>There are no user accounts or sign-in, no ads, no in-app purchases, no coins, no real-money play and no betting or wagering feature. The app does not use advertising, analytics, telemetry or billing SDKs. CoderHub26 does not collect, receive or sell data from the app.</p>
+
+<h2>Children</h2>
+<p>Tarneeb &amp; Trix is a card game and is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Retention and deletion</h2>
+<p>Starting a new match replaces that game's current saved match; the previous good copy can remain as a <code>.bak</code> file until it is overwritten. Tarneeb and Trix have separate save files, so starting a new match in one mode does not necessarily delete the other mode's file. There is no in-app statistics-reset button in this version, so statistics and preferences remain until you clear the app's storage or uninstall the app.</p>
+<p>To remove all app data, use Android Settings &gt; Apps &gt; Tarneeb &amp; Trix &gt; Storage &gt; Clear storage, or uninstall the app. That removes both games' private saves, backups, the shared statistics file and preferences. There is no exported or developer-server copy to delete because the app has no export or network feature.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

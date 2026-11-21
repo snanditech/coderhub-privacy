@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kachuful Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>Kachuful Privacy Policy</h1>
+<p class="meta">App: Kachuful (kachuful) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>Kachuful is an offline judgement (oh-hell) card game for three to seven players, with bots and pass-and-play. It has no account, no developer server and no INTERNET permission. There are no online or Wi-Fi rooms, chat or leaderboards.</p>
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in private storage under <code>files/kachuful</code>:</p><ul><li><code>match.json</code> (with a local <code>.bak</code> copy): the current match, including player count, scoring variant, dealer hook and short-game choice, difficulty, seed/rng state, round, dealer, hand size, trump, phase, every player's hand, bids, tricks won, current/last trick, leader, turn, scores, bots and completed-round results.</li><li><code>stats.json</code>: lifetime bidding accuracy, win/loss/draw record and best score.</li><li>Private preferences: theme, scoring variant, dealer hook, short-game switch, difficulty, fast-bots and large-cards switches.</li></ul><p>The files are written atomically and keep a local backup. They are not separately encrypted; they rely on Android's app sandbox and device storage encryption.</p>
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded. The app declares no <code>INTERNET</code> permission and contains no developer server, advertising, analytics or tracking code, so it cannot send your content to the developer or an ad network.</p><p>Kachuful has no share sheet, no export and no network feature. Saved matches and statistics are not sent anywhere.</p>
+<h2>Permissions</h2>
+<p>The app declares no Android runtime permission. It does not request storage, location, camera, microphone, contacts or notification access.</p>
+<p>Like any Android app built with AndroidX, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (the manifest sets <code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its current extraction rules exclude only the <code>database</code> and <code>sharedpref</code> domains from cloud backup; the app's <code>files/</code> records are not named in a separate rule. The file also has no <code>device-transfer</code> block. The manifest switch is the primary control, and the extraction XML should be widened if backup is ever enabled.</p>
+<h2>Rules and pass-and-play limits</h2><p>The app implements only the three documented scoring variants (Classic 10, Strict penalty and Simple), the optional dealer hook and a quick/full deal choice. Regional Kachuful scoring differs; a regional player should confirm the house rules. Pass-and-play is on one phone and each hand is hidden until the acting player taps Show my hand; the app is not a substitute for physically keeping the phone away from the next player. Bots use legal bids and plays only.</p>
+<h2>Ads, accounts and purchases</h2>
+<p>The app has no user accounts and no sign-in. There are no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell any data from the app.</p>
+<h2>Children</h2>
+<p>Kachuful is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+<h2>Data deletion</h2>
+<p>Reset statistics in Settings and clear the saved match by starting a new game. Clearing the app's storage from Android Settings &gt; Apps &gt; Kachuful &gt; Storage deletes both files. Uninstalling the app deletes its private storage. There is no exported or server copy.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BhumiMeasure Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>BhumiMeasure Privacy Policy</h1>
+<p class="meta">App: BhumiMeasure (bhumimeasure) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>BhumiMeasure records a plot boundary with the phone's location or with points you type, then calculates area and perimeter. The maths runs on the phone. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+  <li>Saved plots: name, note, chosen land unit, boundary points (latitude and longitude), computed area and perimeter, average GPS accuracy and date.</li>
+  <li>Photos you attach to a plot, taken with the phone's camera app and copied into the app's private folder.</li>
+  <li>Settings such as the theme and preferred units.</li>
+</ul>
+<p>Plots are one JSON file and photos are image files in app-private storage; settings are private preferences. Android's automatic backup is turned off for BhumiMeasure (the manifest sets <code>allowBackup=false</code>), so Android does not copy this data to Google Drive.</p>
+<p>BhumiMeasure does not add its own encryption to plots or photos; they rely on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing is uploaded. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else.</p><p>When you export, a PDF sheet or a KML file is written to the app's cache and shared through a read-only <code>FileProvider</code> URI. The PDF contains the plot name, note, area, conversions, sketch, accuracy and boundary table; the KML contains the boundary coordinates. An app you share it to keeps its own copy under its own policy.</p>
+<h2>Location</h2>
+<p>BhumiMeasure declares <code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code>. Location is read only while the walk screen or the manual screen is open, after Android's permission prompt and an in-app explanation. The app stops requesting fixes when you leave those screens. It has no background location permission and no location service, so it cannot track you while it is closed. Coordinates are used to calculate the boundary and are stored only as part of a plot you save. They are never uploaded.</p><p>Measurements are estimates, not a legal survey. The app shows GPS accuracy and a possible area error precisely because phone location is not a substitute for a licensed surveyor.</p>
+
+<h2>Camera</h2>
+<p>Plot photos are taken through the phone's own camera app using the system capture contract. BhumiMeasure declares no <code>CAMERA</code> permission and receives only the single photo you approve; it cannot open the camera by itself or read other images.</p>
+
+<h2>Permissions</h2>
+<p>The app declares only these permissions:</p><ul><li><code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code> &mdash; runtime permissions used only for the boundary walk and the current-location button while the measuring screen is open. You can refuse them and still type points by hand.</li></ul><p>It does not request storage, camera, microphone, contacts or notification access.</p><p>Like any Android app built with AndroidX, the merged manifest also contains the library's own signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>BhumiMeasure has no user accounts and no sign-in. There are no ads and no in-app purchases. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>BhumiMeasure is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling BhumiMeasure deletes its plots, plot photos and settings. You can also delete individual plots in the app, or clear everything from Android Settings &gt; Apps &gt; BhumiMeasure &gt; Storage &gt; Clear storage. PDFs and KML files you shared are outside the app and remain until you delete them.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

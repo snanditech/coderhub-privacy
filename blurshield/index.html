@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlurShield Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>BlurShield Privacy Policy</h1>
+<p class="meta">App: BlurShield (blurshield) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>BlurShield hides faces, number plates, IDs, screens and addresses by burning black covers, blur or pixelation into a new image. Imported photos and redaction plans stay in the app's private storage. There is no account, no developer server and no <code>INTERNET</code> permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+<li><code>files/blurshield/workspace.json</code>: each project's name, its imported photo file name, the redaction plan (tool type, normalised box or brush positions, strength and radius), creation/update times and the last export time; plus saved tool styles.</li>
+<li>Private copies of every photo you import, under <code>files/blurshield/photos/</code>. The app reads the selected image and writes its own copy. <strong>Your gallery file is not modified, but the app keeps a separate copy until you delete the project or clear the app.</strong> Deleting the original from your gallery does not delete the app's copy. The imported copy can still contain the original's EXIF, GPS or camera metadata.</li>
+<li>Private settings: theme, default export format, maximum export dimension, default effect strength and brush size, and whether guides are shown.</li>
+<li>Completed export files in a unique per-run folder under <code>cache/exports/</code>. A failed or cancelled run deletes only its own folder. A file already handed to a share target is retained so that app can read it; an unshared prepared file may be removed when you close the dialog. Android may clear the cache later, and clearing app storage removes it.</li>
+</ul>
+<p>The workspace file is replaced through a temporary file and rename. A file that cannot be decoded is copied aside as <code>workspace-corrupt-&lt;time&gt;.json</code> instead of being silently overwritten. The app does not add its own encryption; these files rely on Android's app sandbox and device storage encryption.</p>
+
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded to the developer. There is no <code>INTERNET</code> permission, developer server, advertising or analytics code.</p>
+<p>Only an image you explicitly share or save leaves the app. When you tap Share, the completed export is written to the app's private <code>cache/exports/</code> folder and passed to Android's share sheet through a non-exported <code>FileProvider</code> that exposes only that folder. When you tap Save, it is written directly to the location you choose with the system file picker. Batch export uses the same cache/share path. The receiving app or storage provider keeps its own copy under its own policy and may use a network. The developer does not receive it.</p>
+
+<h2>Permissions</h2>
+<p>The app declares no Android runtime permission. Photos are selected with the system photo picker; the app cannot browse your gallery by itself. There is no camera, storage, location, microphone, contacts or notification permission.</p>
+<p>Like most AndroidX apps, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (<code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its data-extraction rules exclude the <code>file</code>, <code>database</code>, <code>sharedpref</code> and <code>external</code> domains from both cloud backup and device transfer. The developer has no server copy to restore. Imported photos and plans therefore do not move to a new phone through Android backup or device transfer.</p>
+
+<h2>Metadata and export format</h2>
+<p>An export is a new image encoded from pixels, not a copy of the original file. The exported PNG or JPEG does not carry the source's EXIF block, GPS coordinates, camera model or embedded thumbnail. The app's private imported copy of the photo is not rewritten, so any metadata in that copy remains until you delete it.</p>
+<p>PNG is the default and keeps the black cover's edges exact. JPEG is smaller, but lossy compression can smear pixels at the edge of a cover. The app re-decodes a JPEG export and checks the covers with a small tolerance for compression ringing (currently up to 24 codec levels); that is a practical check, not a mathematical proof of irrecoverability. For anything sensitive, export PNG and inspect the file yourself before sharing.</p>
+
+<h2>What redaction does and does not do</h2>
+<p>Black box, oval and brush replace the covered pixels with solid black in the exported copy, and the exported image is flattened to remove transparency. Blur and pixelate only obscure pixels and can sometimes be reversed by software; they are not secure redaction. A black oval leaves the corners of its bounding box untouched. Automatic face detection and video redaction are not included; detection is manual.</p>
+<p>Redaction protects the exported copy only. It does not remove the original photo, the app's imported copy, screenshots of the app, or copies you already sent to other people. No app can guarantee that a redacted image is unrecoverable or that every sensitive detail was covered. Check the exported image at full size before sharing.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>There are no user accounts, no sign-in, no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell data from the app.</p>
+
+<h2>Children</h2>
+<p>BlurShield is not directed at children under 13. It has no accounts and no way to send information to the developer.</p>
+
+<h2>Retention and deletion</h2>
+<p>Deleting a project in the app removes its imported photo copy and redaction plan. Deleted or replaced projects do not delete the original gallery file. Clear the app's storage in Android Settings &gt; Apps &gt; BlurShield &gt; Storage, or uninstall the app, to remove all private photos, plans, styles and temporary exports. Shared or saved images, and the original photos in your gallery, are outside the app and remain until you delete them. There is no developer server copy to delete.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

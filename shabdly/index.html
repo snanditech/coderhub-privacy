@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shabdly Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>Shabdly Privacy Policy</h1>
+<p class="meta">App: Shabdly (shabdly) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>Shabdly is an offline daily word puzzle in Hindi (Devanagari) and Bengali. It keeps local statistics and the current daily game. It has no account, no developer server and no INTERNET permission.</p>
+<h2>What the app stores on your device</h2>
+<p>The app keeps <code>shabdly.json</code> in private storage, with a local <code>.bak</code> copy and quarantined corrupt files. It contains, for each script: games played, wins, current and best streak, the six-attempt distribution, the last played local date, the current daily guesses/finished/won state, and the last chosen script. Private preferences hold the theme. The word list is bundled in the app, not downloaded.</p>
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded. The app declares no <code>INTERNET</code> permission and contains no developer server, advertising, analytics or tracking code, so it cannot send your content to the developer or an ad network.</p><p>When you finish a daily puzzle, the Share button hands a spoiler-free result (coloured blocks, attempt count, script, date and app title) to Android's share sheet. The answer and your guesses are not included. The receiving app keeps its own copy and may use a network; Shabdly itself does not upload the result.</p>
+<h2>Permissions</h2>
+<p>The app declares no Android runtime permission. It does not request storage, location, camera, microphone, contacts or notification access.</p>
+<p>Like any Android app built with AndroidX, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (the manifest sets <code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its current rules exclude the <code>database</code>, <code>sharedpref</code>, <code>file</code> and <code>root</code> domains from cloud backup. The file does not add a separate <code>device-transfer</code> block, so do not treat the extraction XML alone as a guarantee against every OEM migration tool; the manifest's backup switch is the primary control.</p>
+<h2>Daily play and limits</h2><p>The daily word is chosen once per local device date; changing the device date or time zone can affect which daily puzzle the app shows. The shipped word list is a small curated starter set, not a dictionary or a course. Guesses are checked for script letters and length, not against a dictionary, so an unsupported sequence can be accepted as a guess. The words, glosses, keyboard and cluster splitting are pending independent native Hindi/Bengali review; this build does not claim native-speaker certification.</p>
+<h2>Ads, accounts and purchases</h2>
+<p>The app has no user accounts and no sign-in. There are no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell any data from the app.</p>
+<h2>Children</h2>
+<p>Shabdly is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+<h2>Data deletion</h2>
+<p>Reset one script or all statistics in the app, or clear the app's storage from Android Settings &gt; Apps &gt; Shabdly &gt; Storage. Uninstalling the app deletes its private storage. A result you shared is outside the app and remains until you delete it in the receiving app. There is no developer server copy.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

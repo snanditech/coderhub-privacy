@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shruti Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>Shruti Privacy Policy</h1>
+<p class="meta">App: Shruti (shruti) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>Shruti is a practice room for Hindustani music: a tanpura, shruti box, tabla, metronome and a swara (pitch) trainer. Every sound is synthesized on the phone; there are no bundled recordings. The pitch trainer uses the microphone only for a live, in-memory reading. There is no account, no developer server and no INTERNET permission.</p>
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p><ul><li>The practice log in <code>practice_log.json</code>: each entry's date, whole minutes practised, tool (tanpura, shruti box, tabla, metronome or pitch), optional tempo and an optional note you type.</li><li>Settings in private preferences: theme, Sa and pitch reference, tanpura pattern and speed, shruti chord, tabla taal and tempo, lehra switch, metronome settings, volumes and automatic-logging switch.</li></ul><p>The log is written with a temporary file and rename; a corrupt log is moved aside rather than silently overwritten. The app does not add its own encryption; the log and preferences rely on Android's app sandbox and device storage encryption.</p>
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded. The app declares no <code>INTERNET</code> permission and contains no developer server, advertising, analytics or tracking code, so it cannot send your content to the developer or an ad network.</p><p>Shruti has no share sheet, no file export and no network feature. It never writes microphone audio to a file, and there is no recording library or upload path.</p>
+<h2>Permissions</h2>
+<p>The only declared permission is <code>RECORD_AUDIO</code>. It is a runtime permission used only while the swara trainer is listening. The microphone window is analysed in memory for pitch and then discarded; capture stops when you leave the trainer or background the app. Deny the permission and every other tool still works. The app does not request storage, location, contacts or notification access.</p>
+<p>Like any Android app built with AndroidX, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (the manifest sets <code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its data-extraction rules exclude <code>file</code>, <code>database</code>, <code>sharedpref</code> and <code>external</code> domains from both cloud backup and device transfer. The developer has no server copy to restore.</p>
+<h2>Microphone and audio</h2><p>The pitch trainer reads short microphone windows only after you start it. It is monophonic and works best on a sustained note; a loud drone, room noise or strong overtones can confuse it. It is a practice aid, not a calibrated tuner. The app does not save, transmit or share microphone audio.</p><h2>Synthesized sound, not recordings</h2><p>The tanpura, shruti box, tabla bols and lehra are synthesized models, not samples of real instruments. They are useful for practice and tempo, but they are not a sample library, not a recording of a tanpura or tabla, and the lehra is a simple scale melody. The JVM tests are synthetic signal checks, not acoustic certification or hardware accuracy claims.</p>
+<h2>Ads, accounts and purchases</h2>
+<p>The app has no user accounts and no sign-in. There are no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell any data from the app.</p>
+<h2>Children</h2>
+<p>Shruti is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+<h2>Data deletion</h2>
+<p>Delete individual log entries in the Log screen, or clear the whole practice log there. Resetting settings does not delete the practice log. Uninstalling the app deletes its private storage, including the log and settings. There is no exported or server copy to delete.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

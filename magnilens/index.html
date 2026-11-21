@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MagniLens Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>MagniLens Privacy Policy</h1>
+<p class="meta">App: MagniLens (magnilens) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>MagniLens turns the phone camera into a magnifier with zoom, freeze, filters and a light. The camera feed is processed on the phone. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+  <li>Snapshots you choose to save, as JPEG files in the app's own pictures folder.</li>
+  <li>Settings such as theme, last filter and keep-awake preference.</li>
+</ul>
+<p>Snapshots are written to the app's app-specific external pictures folder (<code>Pictures/MagniLens</code>), with an internal fallback when external storage is not mounted. They are not added to the shared photo gallery. Settings are private preferences. Android's automatic backup is turned off for MagniLens (the manifest sets <code>allowBackup=false</code>), so Android does not copy this data to Google Drive.</p>
+<p>MagniLens does not add its own encryption to snapshots; they rely on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing is uploaded. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else.</p><p>When you share a snapshot, the JPEG is handed to Android's share sheet as a read-only <code>FileProvider</code> URI. An app you share it to keeps its own copy under its own policy. There is no other export and no sync.</p>
+<h2>Camera</h2>
+<p>MagniLens declares <code>CAMERA</code> and shows the live camera preview only on screen. Freeze captures one full-resolution still in memory for you to read; a file is written only when you tap Save. The app does not record video, does not record audio, does not use the microphone and does not read other photos or the gallery. The torch is used only while you switch the light on.</p>
+
+<h2>Not a medical device</h2>
+<p>MagniLens is a general-purpose magnifier. It is not a medical device and does not replace a prescribed magnifier or professional advice.</p>
+
+<h2>Permissions</h2>
+<p>The app declares only this permission:</p><ul><li><code>CAMERA</code> &mdash; runtime permission for the live magnified view, the freeze capture and the torch. Android asks when the preview opens; you can refuse and the app explains how to grant it later in Settings.</li></ul><p>It does not request storage, microphone, location, contacts or notification access. Snapshots use app-specific storage, so no storage permission is needed.</p><p>Like any Android app built with AndroidX, the merged manifest also contains the library's own signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>MagniLens has no user accounts and no sign-in. There are no ads and no in-app purchases. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>MagniLens is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling MagniLens deletes its snapshots and settings. You can also delete one snapshot or clear them all in the app's gallery, or clear everything from Android Settings &gt; Apps &gt; MagniLens &gt; Storage &gt; Clear storage. Snapshots you shared are outside the app and remain until you delete them.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

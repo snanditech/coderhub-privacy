@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TutorBook Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>TutorBook Privacy Policy</h1>
+<p class="meta">App: TutorBook (tutorbook) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>TutorBook keeps batches, students, monthly fees, receipts, attendance, test marks and income for a tutor or small coaching centre. Receipts, CSVs and the encrypted backup are produced on the phone. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+  <li>Batches: name, subject, schedule and monthly fee.</li>
+  <li>Students: name, guardian, optional phone number, batch, joining date, fee override and active status.</li>
+  <li>Fees and payments: month, amount, date, payment mode, note and receipt number.</li>
+  <li>Attendance, test marks and income summaries.</li>
+  <li>Settings: theme and the tutor name printed on receipts.</li>
+</ul>
+<p>Batches, students, attendance, fees, marks and settings are stored in one JSON file in the app's private storage. Android's automatic backup is turned off for TutorBook (the manifest sets <code>allowBackup=false</code>), so Android does not copy this data to Google Drive.</p>
+<p>TutorBook's main record file is not encrypted by the app; it relies on Android's app sandbox and the encryption Android applies to device storage. The separate manual backup is encrypted: AES-256-GCM with a key derived from your password using PBKDF2-HMAC-SHA256 (210,000 iterations), and the file header is authenticated. The password is not stored and cannot be recovered if you forget it.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing is uploaded. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else.</p><p>Receipt PDFs, due-list and income CSVs, and reminder text are handed to Android's share sheet; files are written to the app's cache and shared as read-only <code>FileProvider</code> URIs. They contain student and guardian names, fees and marks. An app you share them to keeps its own copy under its own policy.</p><p>A backup leaves the app only when you tap Backup and choose a location with the system file picker. The app writes the encrypted file there; it does not upload it. A backup you save is outside the app and remains until you delete it. Restoring reads a backup you pick with the same picker.</p>
+<h2>Children's records</h2>
+<p>TutorBook can hold names, guardian contact details, attendance and test marks for children. This information stays on the phone and is never sent to the developer. There is no online account, no cloud sync and no class-sharing feature. Anyone who can unlock the phone and open the app can read the records, so use the device lock and keep backups in a place you control. The backup is encrypted; the working file is not.</p>
+
+<h2>Permissions</h2>
+<p><strong>None.</strong> The app declares no Android runtime permission. It does not ask for storage, location, camera, microphone, contacts or notification access. Backup and restore use the system file picker, which grants access only to the file or folder you choose.</p><p>Like any Android app built with AndroidX, the merged manifest also contains the library's own signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>TutorBook has no user accounts and no sign-in. There are no ads and no in-app purchases. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>TutorBook is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling TutorBook deletes its batches, students, attendance, fees, marks and settings. You can also delete students and payments in the app, or clear everything from Android Settings &gt; Apps &gt; TutorBook &gt; Storage &gt; Clear storage. Shared receipts and CSVs, and any backup file you saved, are outside the app and remain until you delete them.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

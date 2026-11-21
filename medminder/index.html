@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedMinder Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>MedMinder Privacy Policy</h1>
+<p class="meta">App: MedMinder (medminder) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>MedMinder is an offline medicine reminder and personal health log. You enter the schedule, the dose text from your own prescription or pack, and the times you want to be reminded; you may also log blood pressure, blood sugar and weight. It is <strong>not a medical device</strong> and gives no diagnosis, dose or interaction advice. It has no account, no developer server and no INTERNET permission.</p>
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p><ul><li><code>medminder.json</code> (with a local <code>.bak</code> copy and quarantined corrupt files): family profiles (name, relation, optional birth year); medicine schedules (medicine and dose text exactly as typed, times, weekdays, start/end date, active switch, units per dose, optional hand-counted stock and refill level, internal alarm slot); dose actions (taken/skipped, time, note, medicine/dose/person snapshots and the stock delta actually applied); health readings (systolic/diastolic blood pressure, blood sugar in mg/dL, weight in grams, note and timestamp); and an internal alarm counter.</li><li>Private preferences: theme, reminder switch, and the last dose for which a notification was actually posted.</li></ul><p>These are <strong>sensitive health and profile records</strong>. The app does not add its own encryption; the file relies on Android's app sandbox and device storage encryption. Anyone who can unlock the phone and open the app can read it.</p>
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded. The app declares no <code>INTERNET</code> permission and contains no developer server, advertising, analytics or tracking code, so it cannot send your content to the developer or an ad network.</p><p>The Report screen can create a text report and a PDF. The text is handed to Android's share sheet only when you press Share; the PDF is written only to a destination you choose through the system file picker. The report contains profile names, medicine and dose text, dose history and health readings. A receiving app or the storage provider keeps its own copy under its own policy and may use a network. MedMinder does not upload the report itself.</p>
+<h2>Permissions</h2>
+<p>The app declares <code>POST_NOTIFICATIONS</code> (Android 13+ runtime permission for dose reminders), <code>SCHEDULE_EXACT_ALARM</code> (used only to request exact timing for the reminders you schedule; if the user or system does not allow it, the app falls back to inexact <code>setAndAllowWhileIdle</code> alarms) and <code>RECEIVE_BOOT_COMPLETED</code> (normal permission used to re-arm reminders after a reboot, app update or clock/time-zone change). It does not request camera, microphone, location, contacts, storage or network access.</p>
+<p>Like any Android app built with AndroidX, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (the manifest sets <code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its current rules exclude the <code>database</code>, <code>sharedpref</code>, <code>file</code> and <code>root</code> domains from cloud backup. The file does not add a separate <code>device-transfer</code> block, so do not treat the extraction XML alone as a guarantee against every OEM migration tool; the manifest's backup switch is the primary control.</p>
+<h2>Health data, notifications and no medical advice</h2><p>All medicine names, dose text, schedules, dose actions, stock counts, blood pressure, blood sugar, weight and notes are entered by the user. The app does not suggest a dose, recommend a medicine, diagnose anything, check interactions, or label a reading high, low or healthy. It is not a medical record or prescription. Follow your doctor or pharmacist.</p><p>Dose reminders are best effort, <strong>not guaranteed</strong>. They can be late or missing if the phone is off, out of battery, in Do Not Disturb, restricted by an OEM battery manager, if notification permission or the exact-alarm allowance is denied, or if Android delays the alarm. A pending snooze is lost if the phone restarts. The notification is marked private: the lock-screen public version says only “Open MedMinder to view your reminder”; medicine and dose text are shown after the device is unlocked. The notification uses the dedicated “Dose reminders” channel, a “not guaranteed” subtext, and Taken and Snooze 10 min actions.</p><h2>Health-app declaration</h2><p>For Play, the app should be declared as a health and fitness app that records user-entered information and provides no diagnosis, treatment or clinical decision support, and the exact-alarm use should be declared. Those are review actions, not automatic approvals.</p>
+<h2>Ads, accounts and purchases</h2>
+<p>The app has no user accounts and no sign-in. There are no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell any data from the app.</p>
+<h2>Children</h2>
+<p>MedMinder is intended for adults managing their own or a family member's medicines. It is not directed at children under 13, and it has no accounts or developer collection.</p>
+<h2>Data deletion</h2>
+<p>Delete individual schedules, dose actions, health readings or family profiles in the app; removing a profile removes its schedules and readings. Settings has Delete all. Uninstalling the app deletes its private storage and local backup. A text report or PDF you shared or saved is outside the app and remains until you delete it in the receiving app or storage location. There is no developer server copy.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

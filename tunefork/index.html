@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TuneFork Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>TuneFork Privacy Policy</h1>
+<p class="meta">App: TuneFork (tunefork) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>TuneFork is an offline chromatic tuner, metronome and reference-tone generator. The microphone is used only for a live, in-memory pitch reading and is never recorded or saved. Custom tunings and settings stay on the phone. There is no account, no developer server and no <code>INTERNET</code> permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+<li><code>files/tunefork/tunings.json</code> (with a temporary replacement file and quarantined corrupt copies): custom tunings you create, containing a name, a list of string labels and MIDI note numbers, and a creation time.</li>
+<li>Private settings: theme, A4 reference, selected tuning, clarity threshold, metronome BPM, time signature, subdivision, first-beat accent, tone volume, tone note, and keep-screen-on preference.</li>
+</ul>
+<p>The custom-tuning file is written through a temporary file and rename. The app does not add its own encryption; these files rely on Android's app sandbox and device storage encryption.</p>
+
+<h2>Microphone and audio</h2>
+<p>The app requests <code>RECORD_AUDIO</code> only when you start the tuner. Short microphone windows are read into memory, converted to a pitch estimate, and then discarded. <strong>TuneFork does not write microphone audio to a file, does not keep a recording or history, and has no upload path.</strong> Capture stops when you leave the tuner or background the app. Denying the permission leaves the metronome and tone generator usable.</p>
+<p>The metronome clicks and reference tones are synthesized in the app; there are no bundled audio recordings. A phone speaker is not a calibrated reference and the sound is coloured by the speaker and room. Use headphones if you need a cleaner reference, and start at a low volume.</p>
+
+<h2>Accuracy and limitations</h2>
+<p>The pitch detector is designed for about 40 Hz to 1.5 kHz. A low bass E1 (about 41 Hz) sits at the bottom edge, and notes above roughly 1.5 kHz are not detected. Detection can be confused by room noise, echo, strong overtones, a loud drone or microphone automatic gain control.</p>
+<p>No acoustic accuracy has been measured on a phone. The automated tests use synthetic signals; they are not a hardware calibration or a guarantee that a reading matches a reference tuner. Treat the display as a practice aid, not a certified instrument. Metronome click timing is calculated from absolute sample positions so rounding does not accumulate, but actual audio latency and device timing are not certified.</p>
+
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded to the developer. There is no <code>INTERNET</code> permission, developer server, advertising or analytics code. TuneFork has no share sheet, file export or recording. Microphone audio and generated tones are not sent anywhere.</p>
+
+<h2>Permissions</h2>
+<p>The only declared permission is <code>RECORD_AUDIO</code>, requested at runtime when you start the tuner. The app does not request storage, location, contacts or notification access. The microphone feature is optional.</p>
+<p>Like most AndroidX apps, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for this app (<code>allowBackup=false</code> and <code>fullBackupContent=false</code>). Its data-extraction rules exclude the <code>file</code>, <code>database</code>, <code>sharedpref</code> and <code>external</code> domains from both cloud backup and device transfer. The developer has no server copy to restore. Custom tunings and settings therefore do not move to a new phone through Android backup or device transfer.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>There are no user accounts, no sign-in, no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell data from the app.</p>
+
+<h2>Children</h2>
+<p>TuneFork is not directed at children under 13. It has no accounts and no way to send information to the developer.</p>
+
+<h2>Retention and deletion</h2>
+<p>Delete a custom tuning in the app to remove it, or change individual settings at any time. Clear the app's storage in Android Settings &gt; Apps &gt; TuneFork &gt; Storage, or uninstall the app, to remove all custom tunings and settings. Microphone audio is not stored, so there is no audio recording to delete. There is no developer server copy to delete.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

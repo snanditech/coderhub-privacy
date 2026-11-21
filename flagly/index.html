@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://snanditech.github.io/coderhub-privacy/flagly/">
+<title>Flagly Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>Flagly Privacy Policy</h1>
+<p class="meta">App: Flagly (flagly) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>Flagly is an offline flags, capitals and currency quiz with a learn atlas, a date-seeded daily ten and a pass-and-play duel on one device. It keeps your saved quiz, local statistics and preferences on this phone. It has no account, no developer server and no <code>INTERNET</code> permission. There are no online rooms, leaderboards, cloud saves, ads, analytics or purchases.</p>
+
+<h2>What the app stores on your device</h2>
+<p>Flagly keeps two JSON files in its private storage under <code>files/flagly</code>:</p>
+<ul>
+  <li><code>session.json</code>: the current quiz or duel, including mode, region, the generated questions and options, the correct answers, question index, scores, whether the current question was answered, the chosen option, finished state, generator seed and the daily local date.</li>
+  <li><code>stats.json</code>: total questions answered and correct, current and best answer streak, all-time daily best, last daily date, daily streak, last daily score, today's daily best, duels played and practice runs.</li>
+</ul>
+<p>Private app preferences store the theme and the last selected region filter. A short-lived <code>.tmp</code> file is used while saving.</p>
+<p>Flagly does not ask for your name, email, contacts, location, photos, microphone, camera or any account. Quiz answers and statistics are game data, not a profile. The duel is passed between two people on the same device; it is not a network connection.</p>
+<p>The files are not separately encrypted by Flagly. They rely on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves the device</h2>
+<p>Nothing is uploaded or shared. Flagly declares no <code>INTERNET</code> permission and contains no network code, advertising, analytics or billing SDK. It has no share or export feature. Questions are generated locally from a seed; no question, answer, score or identifier is sent to a server.</p>
+
+<h2>Permissions</h2>
+<p>Flagly declares no Android runtime permission. It does not request storage, location, camera, microphone, contacts, notification access or an exact alarm. Like any Android app built with AndroidX, the merged manifest also contains the library's signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>; it is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Daily quiz and local progress</h2>
+<p>The daily ten is derived from the device's local calendar date. Changing the device date or time zone can change which daily set appears and how a streak is counted. Saved runs, scores and region preference are local to this installation.</p>
+
+<h2>Flags, facts and content limits</h2>
+<p>Flagly does not bundle flag image files. Flags are drawn by the device from Unicode regional-indicator letters in the system emoji font. Their artwork, proportions and shapes are simplified and can differ between devices and font versions; some fonts show the two letters instead of a flag. Nepal's non-rectangular flag and Switzerland's square flag are not reproduced exactly. No flag or map artwork is downloaded by the app, and no map-outline questions or border drawings are included.</p>
+<p>The quiz covers a curated set of 169 of the 193 UN member states, not every country or territory. Capital and currency facts were checked on 14 November 2026; the app does not fetch or automatically verify facts online. Where a state has more than one capital or seat of government, the official or legislative capital is used and the alternative is explained in Help. Territories, disputed regions and states with an unresolved transitional capital are excluded. Currency questions use the primary ISO 4217 code and do not offer a second legal-tender currency as a distractor. These facts are a learning aid, not a geopolitical or legal authority; if a fact disagrees with a national authority or textbook, trust that authority.</p>
+
+<h2>Android backup and device transfer</h2>
+<p>Android automatic backup is turned off for Flagly: the manifest sets <code>allowBackup=false</code> and <code>fullBackupContent=false</code>. The app's extraction rules also exclude the <code>database</code> and <code>sharedpref</code> domains from cloud backup, but they do not include a separate <code>device-transfer</code> block and do not name the <code>files/flagly</code> records individually. The manifest switch is the primary control.</p>
+<p>This policy does not claim that a manufacturer's device-to-device transfer tool, a rooted device or a forensic copy cannot access app data. To remove the app's data reliably, clear its storage in Android settings or uninstall it. If backup behaviour is ever re-enabled, the extraction rules should be widened before this page can claim that app files are excluded.</p>
+
+<h2>Deletion</h2>
+<p>Flagly has no in-app button that resets all statistics. “Start a new quiz” discards the saved quiz in progress but leaves statistics and daily history in place. If the saved run is unreadable, the recovery option can discard it without resetting statistics.</p>
+<p>To delete all Flagly data, clear the app's storage from Android Settings &gt; Apps &gt; Flagly &gt; Storage, or uninstall the app. There is no developer server copy to delete, and no shared score or quiz copy outside the app.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>Flagly has no user accounts and no sign-in. There are no ads, no in-app purchases and no advertising, analytics or billing SDK. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>Flagly is a general-audience quiz and is not directed at children under 13. It has no accounts, chat or online features and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

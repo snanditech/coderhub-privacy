@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StatusSplit Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>StatusSplit Privacy Policy</h1>
+<p class="meta">App: StatusSplit (statussplit) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>StatusSplit splits long videos into shorter parts on Android. Video is read and cut on the phone; there is no upload and no re-encoding in this version. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+  <li>A small library record of the parts you have made: names, durations, sizes and file paths.</li>
+  <li>The generated video parts themselves, stored in the app's private storage until you delete them.</li>
+  <li>Settings such as the theme and default part length.</li>
+</ul>
+<p>The library is one JSON file, the parts are files in app-private storage, and settings are private preferences. Android's automatic backup is turned off for StatusSplit (the manifest sets <code>allowBackup=false</code>), so Android does not copy this data to Google Drive.</p>
+<p>StatusSplit does not add its own encryption to these files; they rely on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing is uploaded. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else.</p>
+<p>A video is opened through the system photo picker, which grants read access only to the video you choose. The original is not modified.</p>
+<p>You can share one part or all of them through Android's share sheet using read-only <code>FileProvider</code> URIs, or export them to a folder you choose with the system folder picker. Exported files are outside the app and remain after uninstall until you delete them. Apps you share to keep their own copies under their own policies.</p>
+
+<h2>Permissions</h2>
+<p>The app declares only these permissions:</p>
+<ul>
+  <li><code>POST_NOTIFICATIONS</code> &mdash; used only for the optional progress notification while a long split runs. Android asks when the app first needs it; you can refuse and still cut videos, and you can turn notifications off later in Android Settings.</li>
+</ul>
+<p>StatusSplit does not request storage, camera, microphone or location permission. The pickers grant access only to the video or folder you choose.</p>
+
+<h2>Video content</h2>
+<p>Videos can contain personal scenes, voices or other sensitive material. Parts stay in app-private storage until you explicitly share or export them, and the app does not analyse their content or send them anywhere.</p>
+<h2>Ads, accounts and purchases</h2>
+<p>StatusSplit has no user accounts and no sign-in. There are no ads and no in-app purchases, and the developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>StatusSplit is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling StatusSplit deletes its library and every generated part in app-private storage. You can also delete individual parts in the app, or clear everything from Android Settings &gt; Apps &gt; StatusSplit &gt; Storage &gt; Clear storage. Parts you exported or shared are outside the app and are not deleted; remove them where you saved them or in the receiving app.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueCheck Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 16px; color: #10202e; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .meta { color: #555; margin-top: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 1.8em; }
+  code { background: #f2f4f7; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+</style>
+</head>
+<body>
+<h1>TrueCheck Privacy Policy</h1>
+<p class="meta">App: TrueCheck (truecheck) &middot; Developer: CoderHub26 &middot; Effective: 14 November 2026</p>
+
+<h2>Summary</h2>
+<p>TrueCheck is an offline verifier for digitally signed PDFs and signed QR or JWT payloads. The signature, hash and token mathematics is calculated on the phone. It has no account, no sign-in, no developer server, no advertising or analytics SDK, and it declares no INTERNET permission.</p>
+
+<h2>What the app stores on your device</h2>
+<p>The app keeps the following in its private storage on this phone:</p>
+<ul>
+  <li>Your trust list: issuer public keys you imported (PEM, PKCS#1 or JWK) and SHA-256 certificate fingerprints you marked as trusted, with the labels you gave them.</li>
+  <li>Settings such as the theme.</li>
+</ul>
+<p>The trust list is one JSON file in the app's private storage and settings are private preferences. Android's automatic backup is turned off for TrueCheck (the manifest sets <code>allowBackup=false</code>), so Android does not copy this data to Google Drive.</p>
+<p>TrueCheck does not add its own encryption to the trust list. It holds public keys and fingerprints, not private keys or passwords, and it relies on Android's app sandbox and the encryption Android applies to device storage.</p>
+
+<h2>What leaves your device</h2>
+<p>Nothing is uploaded. The app declares no INTERNET permission and contains no network code, so it cannot send your content to the developer, an ad network or anyone else.</p><p>A PDF is opened through the system document picker, which grants read access to the one file you choose. TrueCheck reads that file into memory to check the signed byte range and does not copy it into the app's storage. QR text is pasted or typed and is processed in memory; it is not saved.</p><p>You can share a plain-text verification report through Android's share sheet. The report can include the verdict, signer subject and issuer, serial number, certificate dates, algorithms, fingerprint and, for a GST e-invoice, the decoded GSTIN, invoice number, date and total. An app you share it to keeps its own copy under its own policy. There is no file export.</p>
+<h2>What TrueCheck does not check</h2>
+<p>TrueCheck does not check certificate revocation, does not contact a certificate authority, does not bundle a government trust store and does not use the camera. A valid signature proves that the signed bytes have not changed; it does not prove who the signer is unless you have compared and trusted their fingerprint yourself. No government, GST or identity verification is performed or claimed.</p>
+
+<h2>Permissions</h2>
+<p><strong>None.</strong> The app declares no Android runtime permission. It does not ask for storage, camera, location, microphone, contacts or notification access. The document picker grants access only to the PDF you choose.</p><p>Like any Android app built with AndroidX, the merged manifest also contains the library's own signature-level <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is used internally for broadcast receivers, is granted only to this app's own signature, and gives no access to your data.</p>
+
+<h2>Ads, accounts and purchases</h2>
+<p>TrueCheck has no user accounts and no sign-in. There are no ads and no in-app purchases. The developer does not collect, receive or sell any data from the app.</p>
+
+<h2>Children</h2>
+<p>TrueCheck is not directed at children under 13. It has no accounts and no way to send information to the developer, so it does not knowingly collect personal information from children or anyone else.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling TrueCheck deletes the trust list and its settings with the app's private storage. You can also remove individual keys or fingerprints in the app, or clear everything from Android Settings &gt; Apps &gt; TrueCheck &gt; Storage &gt; Clear storage. Reports you shared are outside the app and remain until you delete them.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version is posted on this page with a new effective date. The app itself does not need to change for a policy update.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app's data handling: <a href="mailto:technicalexplorer20@gmail.com">technicalexplorer20@gmail.com</a></p>
+</body>
+</html>
